@@ -26,6 +26,7 @@ Patch6:		%{name}-tmpfix.patch
 Patch7:		%{name}-autoconf.patch
 Patch8:		%{name}-ja.patch
 Patch9:		%{name}-uudecode.patch
+Patch10:	%{name}-po.patch
 #BuildRequires:	autoconf
 #BuildRequires:	automake
 BuildRequires:	gettext-devel
@@ -106,12 +107,14 @@ programlar üzerinden güvenli bir þekilde gönderilebilir.
 %patch7 -p1
 %patch8 -p0
 %patch9 -p1
+%patch10 -p1
+
+mv po/ja_JP.EUC.po po/ja.po
+mv po/ja_JP.EUC.gmo po/ja.gmo
 
 chmod -R u+w *
 
 %build
-mv po/ja_JP.EUC.po po/ja.po
-mv po/ja_JP.EUC.gmo po/ja.gmo
 #gettextize --copy --force
 #aclocal
 #autoconf
