@@ -18,7 +18,7 @@ Patch4:		sharutils-y2k.patch
 Patch5:		sharutils-spaces.patch
 Patch6:		sharutils-sh.patch
 Patch7:		sharutils-tmpfix.patch
-Prereq:		/sbin/install-info
+Prereq:		/usr/sbin/fix-info-dir
 Buildroot:	/tmp/%{name}-%{version}-root
 
 %description
