@@ -13,9 +13,9 @@ Release:	15
 License:	GPL
 Group:		Applications
 Source0:	ftp://ftp.gnu.org/pub/gnu/sharutils/%{name}-%{version}.tar.gz
-# Source0-md5: b8ba1d409f07edcb335ff72a27bd9828
+# Source0-md5:	b8ba1d409f07edcb335ff72a27bd9828
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
-# Source1-md5: 336f405f69324d129a6ccd3b66f8eb6c
+# Source1-md5:	336f405f69324d129a6ccd3b66f8eb6c
 Patch0:		%{name}.patch
 Patch1:		%{name}-pl.patch
 Patch2:		%{name}-info.patch
