@@ -1,11 +1,13 @@
 Summary:	GNU shar utils - shar, unshar, uuencode, uudecode
 Summary(de):	GNU-shar-Dienstprogramme - shar, unshar, uuencode, uudecode
+Summary(es):	Utilitarios shar de la GNU - shar, unshar, uuencode, uudecode
 Summary(fr):	Utilitaires shar de GNU - shar, unshar, uuencode, uudecode
 Summary(pl):	Narzêdzia z GNU shar - shar, unshar, uuencode, uudecode
+Summary(pt_BR):	Utilitários shar da GNU - shar, unshar, uuencode, uudecode
 Summary(tr):	Arþivleme ve kabuk araçlarý
 Name:		sharutils
 Version:	4.2.1
-Release:	10
+Release:	11
 License:	GPL
 Group:		Applications
 Source0:	ftp://ftp.gnu.org/pub/gnu/sharutils/%{name}-%{version}.tar.gz
@@ -19,6 +21,7 @@ Patch5:		%{name}-sh.patch
 Patch6:		%{name}-tmpfix.patch
 Patch7:		%{name}-autoconf.patch
 Patch8:		%{name}-ja.patch
+Patch9:		%{name}-uudecode.patch
 #BuildRequires:	autoconf
 #BuildRequires:	automake
 #BuildRequires:	gettext-devel
@@ -43,6 +46,12 @@ Reihe von Dateien (binär oder Text) in ein einfaches Textformat
 verwenden Dieses Format kann sicher per E-Mail oder andere Verfahren
 gesendet werden, bei denen das Senden von Binärdateien schwierig ist.
 
+%description -l es
+Los utilitarios shar pueden ser usados para codificar y empaquetar
+varios archivos, binarios y/o texto, en un formato especial de
+texto plano. Este formato puede ser seguramente mandado a través
+de mail o otros medios donde mandar archivos binarios sea difícil.
+
 %description -l fr
 Les utilitaires shar servent à encoder et empaqueter un certain nombre
 de fichiers, binaires et/ou texte, sous un format texte spécial. Ce
@@ -55,6 +64,12 @@ binarnych i/lub tekstowych w jednym, tekstowym archiwum. Archiwum
 mo¿na nastêpnie wysy³aæ poczt± elektroniczn± albo innymi metodami,
 które uniemo¿liwiaj± lub znacznie utrudniaj± transmisjê plików
 binarnych.
+
+%description -l pt_BR
+Os utilitários shar podem ser usados para codificar e empacotar
+vários arquivos, binários e/ou texto, em um formato especial de
+texto plano. Este formato pode ser seguramente mandado através de
+mail ou outros meios onde mandar arquivos binários é difícil.
 
 %description -l tr
 shar araçlarý, derlemiþ ya da metin biçimindeki dosyalarý düz metin
@@ -73,6 +88,7 @@ programlar üzerinden güvenli bir þekilde gönderilebilir.
 %patch6 -p1
 %patch7 -p1
 %patch8 -p0
+%patch9 -p1
 
 chmod -R u+w *
 
@@ -101,8 +117,6 @@ install man/ja/man1/* $RPM_BUILD_ROOT%{_mandir}/ja/man1
 install man/ja/man5/* $RPM_BUILD_ROOT%{_mandir}/ja/man5
 install man/pl/man5/* $RPM_BUILD_ROOT%{_mandir}/pl/man5
 
-gzip -9nf ChangeLog NEWS
-
 %find_lang %{name}
 
 %clean
@@ -116,7 +130,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc *.gz
+%doc ChangeLog NEWS README TODO AUTHORS
 %attr(755,root,root) %{_bindir}/*
 %{_infodir}/*info*
 %{_mandir}/man[15]/*
