@@ -4,20 +4,23 @@ Summary(fr):	Utilitaires shar de GNU - shar, unshar, uuencode, uudecode
 Summary(pl):	Narzêdzia z GNU shar - shar, unshar, uuencode, uudecode
 Summary(tr):	Arþivleme ve kabuk araçlarý
 Name:		sharutils
-Version:	4.2
-Release:	17
+Version:	4.2.1
+Release:	8
 License:	GPL
-Group:		Utilities
-Group(pl):	Narzêdzia
-Source0:	ftp://prep.ai.mit.edu/pub/gnu/%{name}-%{version}.tar.gz
-Patch0:		sharutils.patch
-Patch1:		sharutils-pl.patch
-Patch2:		sharutils-info.patch
-Patch3:		sharutils-autoconf_fix.patch
-Patch4:		sharutils-y2k.patch
-Patch5:		sharutils-spaces.patch
-Patch6:		sharutils-sh.patch
-Patch7:		sharutils-tmpfix.patch
+Group:		Applications
+Group(de):	Applikationen
+Group(pl):	Aplikacje
+Source0:	ftp://ftp.gnu.org/pub/gnu/sharutils/%{name}-%{version}.tar.gz
+Patch0:		%{name}.patch
+Patch1:		%{name}-pl.patch
+Patch2:		%{name}-info.patch
+Patch3:		%{name}-autoconf_fix.patch
+Patch4:		%{name}-spaces.patch
+Patch5:		%{name}-sh.patch
+Patch6:		%{name}-tmpfix.patch
+Patch7:		%{name}-autoconf.patch
+BuildRequires:	autoconf
+BuildRequires:	gettext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -69,12 +72,13 @@ programlar üzerinden güvenli bir þekilde gönderilebilir.
 %patch6 -p1
 %patch7 -p1
 
-%build
+chmod -R u+w *
 
-LDFLAGS="-s"; export LDFLAGS
-%configure \
-	--enable-nsl \
-	--without-gnu-gettext
+%build
+gettextize --copy --force
+aclocal
+autoconf
+%configure
 
 %{__make} all localedir=%{_datadir}/locale
 
@@ -88,8 +92,7 @@ rm -rf $RPM_BUILD_ROOT
 	infodir=$RPM_BUILD_ROOT%{_infodir} \
 	localedir=$RPM_BUILD_ROOT%{_datadir}/locale
 
-gzip -9nf $RPM_BUILD_ROOT%{_infodir}/{sharutils*,remsync*} \
-	$RPM_BUILD_ROOT%{_mandir}/man?/* ChangeLog NEWS
+gzip -9nf ChangeLog NEWS
 
 %find_lang %{name}
 
@@ -104,9 +107,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc {ChangeLog,NEWS}.gz
-
+%doc *.gz
 %attr(755,root,root) %{_bindir}/*
-
-%{_infodir}/*.info.gz
+%{_infodir}/*info*
 %{_mandir}/man[15]/*
