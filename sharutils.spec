@@ -5,7 +5,7 @@ Summary(pl):	Narzêdzia z GNU shar - shar, unshar, uuencode, uudecode
 Summary(tr):	Arþivleme ve kabuk araçlarý
 Name:		sharutils
 Version:	4.2
-Release:	15
+Release:	16
 Copyright:	GPL
 Group:		Utilities
 Group(pl):	Narzêdzia
