@@ -1,0 +1,55 @@
+diff -Nur sharutils-4.2/doc/Makefile.in sharutils-4.2.orig/doc/Makefile.in
+--- sharutils-4.2/doc/Makefile.in	Sat Nov 25 03:44:35 1995
++++ sharutils-4.2.orig/doc/Makefile.in	Sun Dec  6 20:40:42 1998
+@@ -101,7 +101,7 @@
+ 	for name in $(MAN1PAGES); do \
+ 	  if test $$name = uudecode; then \
+ 	    rm -f $(man1dir)/`echo uudecode | sed '$(transform)'`$(man1ext); \
+-	    man1base=`echo $(man1dir) | sed 's@.*/\(.*\)@&1@'`; \
++	    man1base=man1; \
+ 	    echo ".so $$man1base/uuencode$(man1ext)" \
+ 	      > $(man1dir)/`echo uudecode | sed '$(transform)'`$(man1ext); \
+ 	  else \
+diff -Nur sharutils-4.2/po/Makefile.in.in sharutils-4.2.orig/po/Makefile.in.in
+--- sharutils-4.2/po/Makefile.in.in	Mon Dec  4 17:19:48 1995
++++ sharutils-4.2.orig/po/Makefile.in.in	Sun Dec  6 20:40:42 1998
+@@ -124,7 +124,7 @@
+ 	  else \
+ 	    destdir=$(localedir); \
+ 	  fi; \
+-	  lang=`echo $$cat | sed 's/$(CATOBJEXT)$$//'`; \
++	  lang=`echo $$cat | sed 's/\.[^.]*$$//'`; \
+ 	  dir=$$destdir/$$lang/LC_MESSAGES; \
+ 	  $(top_srcdir)/mkinstalldirs $$dir; \
+ 	  if test -r $$cat; then \
+Binary files sharutils-4.2/po/nl.gmo and sharutils-4.2.orig/po/nl.gmo differ
+diff -Nur sharutils-4.2/po/nl.po sharutils-4.2.orig/po/nl.po
+--- sharutils-4.2/po/nl.po	Mon Dec  4 17:55:56 1995
++++ sharutils-4.2.orig/po/nl.po	Sun Dec  6 20:42:36 1998
+@@ -447,7 +447,7 @@
+ msgstr ""
+ 
+ #: src/shar.c:2121
+-msgid "Created %d files\n"
++msgid "Created %d files'\n'"
+ msgstr "%d bestand(en) aangemaakt"
+ 
+ #: src/unshar.c:158
+Binary files sharutils-4.2/po/pt.gmo and sharutils-4.2.orig/po/pt.gmo differ
+diff -Nur sharutils-4.2/po/pt.po sharutils-4.2.orig/po/pt.po
+--- sharutils-4.2/po/pt.po	Mon Dec  4 17:55:56 1995
++++ sharutils-4.2.orig/po/pt.po	Sun Dec  6 20:43:22 1998
+@@ -412,11 +412,11 @@
+ msgstr "Não se escolheu DEBUG durante a compilação"
+ 
+ #: src/shar.c:1819
+-msgid "Hard limit %dk\n"
++msgid "Hard limit %dk'\n'"
+ msgstr "Limite tipo `hard' de %dk"
+ 
+ #: src/shar.c:1886
+-msgid "Soft limit %dk\n"
++msgid "Soft limit %dk'\n'"
+ msgstr "Limite tipo `soft' de %dk"
+ 
+ #: src/shar.c:1987
