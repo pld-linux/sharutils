@@ -9,7 +9,7 @@ Summary(tr):	ArЧivleme ve kabuk araГlarЩ
 Summary(uk):	Утил╕ти GNU shar для створення та розпаковки shell-арх╕в╕в
 Name:		sharutils
 Version:	4.3.77
-Release:	1
+Release:	0.1
 License:	GPL
 Group:		Applications
 Source0:	ftp://ftp.gnu.org/pub/gnu/sharutils/4.3.77/%{name}-%{version}.tar.bz2
