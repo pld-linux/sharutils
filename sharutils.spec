@@ -27,7 +27,7 @@ Patch9:		%{name}-uudecode.patch
 #BuildRequires:	autoconf
 #BuildRequires:	automake
 #BuildRequires:	gettext-devel
-BuildRequires:	texutils
+BuildRequires:	texinfo
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
