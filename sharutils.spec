@@ -9,7 +9,7 @@ Summary(tr):	Arşivleme ve kabuk araçları
 Summary(uk):	õÔÉÌ¦ÔÉ GNU shar ÄÌÑ ÓÔ×ÏÒÅÎÎÑ ÔÁ ÒÏÚĞÁËÏ×ËÉ shell-ÁÒÈ¦×¦×
 Name:		sharutils
 Version:	4.2.1
-Release:	12
+Release:	13
 License:	GPL
 Group:		Applications
 Source0:	ftp://ftp.gnu.org/pub/gnu/sharutils/%{name}-%{version}.tar.gz
@@ -24,9 +24,8 @@ Patch4:		%{name}-spaces.patch
 Patch5:		%{name}-sh.patch
 Patch6:		%{name}-tmpfix.patch
 Patch7:		%{name}-autoconf.patch
-Patch8:		%{name}-ja.patch
+Patch8:		%{name}-po.patch
 Patch9:		%{name}-uudecode.patch
-Patch10:	%{name}-po.patch
 #BuildRequires:	autoconf
 #BuildRequires:	automake
 BuildRequires:	gettext-devel
@@ -105,9 +104,8 @@ programlar üzerinden güvenli bir şekilde gönderilebilir.
 %patch5 -p1
 %patch6 -p1
 %patch7 -p1
-%patch8 -p0
+%patch8 -p1
 %patch9 -p1
-%patch10 -p1
 
 mv po/ja_JP.EUC.po po/ja.po
 mv po/ja_JP.EUC.gmo po/ja.gmo
