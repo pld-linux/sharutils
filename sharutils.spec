@@ -107,17 +107,3 @@ rm -rf $RPM_BUILD_ROOT
 
 %{_infodir}/*.info.gz
 %{_mandir}/man[15]/*
-
-%changelog
-* Thu May 20 1999 Wojtek ¦lusarczyk <wojtek@shadow.eu.org>
-  [2.4-14]
-- FHS 2.0,
-- added support for pl,
-- added some macros,
-- build prepare for Ra.
-
-* Tue Sep  1 1998 Marcin Korzonek <mkorz@shadow.eu.org>
-- build against glibc-2.1,
-- translations modified for pl,
-- changed files permission.
-- start at RH spec file.
