@@ -1,0 +1,7 @@
+- release 15,
+- changes in %%description's,
+- implifications in %%build,
+- new {un}registering procedure for info pages with using
+  /usr/sbin/fix-info-dir,
+- standarization to "* text: (link).  description" format of info index
+  entries.
