@@ -4,7 +4,9 @@ Summary(es):	Utilitarios shar de la GNU - shar, unshar, uuencode, uudecode
 Summary(fr):	Utilitaires shar de GNU - shar, unshar, uuencode, uudecode
 Summary(pl):	NarzЙdzia z GNU shar - shar, unshar, uuencode, uudecode
 Summary(pt_BR):	UtilitАrios shar da GNU - shar, unshar, uuencode, uudecode
+Summary(ru):	Утилиты GNU shar для создания и распаковки shell-архивов
 Summary(tr):	ArЧivleme ve kabuk araГlarЩ
+Summary(uk):	Утил╕ти GNU shar для створення та розпаковки shell-арх╕в╕в
 Name:		sharutils
 Version:	4.2.1
 Release:	11
@@ -48,9 +50,9 @@ gesendet werden, bei denen das Senden von BinДrdateien schwierig ist.
 
 %description -l es
 Los utilitarios shar pueden ser usados para codificar y empaquetar
-varios archivos, binarios y/o texto, en un formato especial de
-texto plano. Este formato puede ser seguramente mandado a travИs
-de mail o otros medios donde mandar archivos binarios sea difМcil.
+varios archivos, binarios y/o texto, en un formato especial de texto
+plano. Este formato puede ser seguramente mandado a travИs de mail o
+otros medios donde mandar archivos binarios sea difМcil.
 
 %description -l fr
 Les utilitaires shar servent Ю encoder et empaqueter un certain nombre
@@ -66,16 +68,28 @@ ktСre uniemo©liwiaj╠ lub znacznie utrudniaj╠ transmisjЙ plikСw
 binarnych.
 
 %description -l pt_BR
-Os utilitАrios shar podem ser usados para codificar e empacotar
-vАrios arquivos, binАrios e/ou texto, em um formato especial de
-texto plano. Este formato pode ser seguramente mandado atravИs de
-mail ou outros meios onde mandar arquivos binАrios И difМcil.
+Os utilitАrios shar podem ser usados para codificar e empacotar vАrios
+arquivos, binАrios e/ou texto, em um formato especial de texto plano.
+Este formato pode ser seguramente mandado atravИs de mail ou outros
+meios onde mandar arquivos binАrios И difМcil.
+
+%description -l ru
+Утилиты shar могут быть использованы для кодирования и упаковки
+нескольких файлов, бинарных и/или текстовых, в специальный файл чисто
+текстового формата. Этот файл может быть послан e-mail'ом или другим
+способом, где посылка бинарных файлов затруднена.
 
 %description -l tr
 shar araГlarЩ, derlemiЧ ya da metin biГimindeki dosyalarЩ dЭz metin
 biГiminde kodlamak iГin kullanЩlabilir. Bu biГimdeki dosya, posta ile
 ya da derlenmiЧ dosyalarЩn gЖnderilmesinin sorun ГЩkardЩПЩ diПer
 programlar Эzerinden gЭvenli bir Чekilde gЖnderilebilir.
+
+%description -l uk
+Утил╕ти shar можуть бути використан╕ для кодування та упаковки к╕лькох
+файл╕в, дв╕йкових та/або текстових, в спец╕альний файл чисто
+текстового формату. Цей файл можна надсилати електронною поштою чи
+╕ншим способом, при якому посилка дв╕йкових файл╕в не п╕дтриму╓ться.
 
 %prep
 %setup -q -a1
