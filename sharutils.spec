@@ -8,12 +8,12 @@ Summary(ru):	Утилиты GNU shar для создания и распаковки shell-архивов
 Summary(tr):	ArЧivleme ve kabuk araГlarЩ
 Summary(uk):	Утил╕ти GNU shar для створення та розпаковки shell-арх╕в╕в
 Name:		sharutils
-Version:	4.2.1
-Release:	16
+Version:	4.3.77
+Release:	1
 License:	GPL
 Group:		Applications
-Source0:	ftp://ftp.gnu.org/pub/gnu/sharutils/%{name}-%{version}.tar.gz
-# Source0-md5:	b8ba1d409f07edcb335ff72a27bd9828
+Source0:	ftp://ftp.gnu.org/pub/gnu/sharutils/4.3.77/%{name}-%{version}.tar.bz2
+# Source0-md5:	d18dc4c5b861018e76d424e8d100d7db
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source1-md5:	336f405f69324d129a6ccd3b66f8eb6c
 Patch0:		%{name}.patch
@@ -97,20 +97,20 @@ programlar Эzerinden gЭvenli bir Чekilde gЖnderilebilir.
 
 %prep
 %setup -q -a1
-%patch0 -p1
-%patch1 -p1
-%patch2 -p1
-%patch3 -p1
-%patch4 -p1
-%patch5 -p1
-%patch6 -p1
-%patch7 -p1
-%patch8 -p1
-%patch9 -p1
-%patch10 -p1
+#%patch0 -p1
+#%patch1 -p1
+#%patch2 -p1
+#%patch3 -p1
+#%patch4 -p1
+#%patch5 -p1
+#%patch6 -p1
+#%patch7 -p1
+#%patch8 -p1
+#%patch9 -p1
+#%patch10 -p1
 
-mv po/ja_JP.EUC.po po/ja.po
-mv po/ja_JP.EUC.gmo po/ja.gmo
+#mv po/ja_JP.EUC.po po/ja.po
+#mv po/ja_JP.EUC.gmo po/ja.gmo
 
 chmod -R u+w *
 
