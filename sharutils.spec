@@ -18,7 +18,6 @@ Patch4:		sharutils-y2k.patch
 Patch5:		sharutils-spaces.patch
 Patch6:		sharutils-sh.patch
 Patch7:		sharutils-tmpfix.patch
-Prereq:		/usr/sbin/fix-info-dir
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -93,10 +92,10 @@ gzip -9nf $RPM_BUILD_ROOT%{_infodir}/{sharutils*,remsync*} \
 %find_lang %{name}
 
 %post
-/usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
+[ -x /usr/sbin/fix-info-dir ] && /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
 
 %postun
-/usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
+[ -x /usr/sbin/fix-info-dir ] && /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
