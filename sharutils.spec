@@ -5,7 +5,7 @@ Summary(pl):	Narzêdzia z GNU shar - shar, unshar, uuencode, uudecode
 Summary(tr):	Arþivleme ve kabuk araçlarý
 Name:		sharutils
 Version:	4.2.1
-Release:	9
+Release:	10
 License:	GPL
 Group:		Applications
 Source0:	ftp://ftp.gnu.org/pub/gnu/sharutils/%{name}-%{version}.tar.gz
@@ -18,6 +18,7 @@ Patch4:		%{name}-spaces.patch
 Patch5:		%{name}-sh.patch
 Patch6:		%{name}-tmpfix.patch
 Patch7:		%{name}-autoconf.patch
+Patch8:		%{name}-ja.patch
 #BuildRequires:	autoconf
 #BuildRequires:	automake
 #BuildRequires:	gettext-devel
@@ -71,10 +72,13 @@ programlar üzerinden güvenli bir þekilde gönderilebilir.
 %patch5 -p1
 %patch6 -p1
 %patch7 -p1
+%patch8 -p0
 
 chmod -R u+w *
 
 %build
+mv po/ja_JP.EUC.po po/ja.po
+mv po/ja_JP.EUC.gmo po/ja.gmo
 #gettextize --copy --force
 #aclocal
 #autoconf
