@@ -5,7 +5,7 @@ Summary(pl):	Narzêdzia z GNU shar - shar, unshar, uuencode, uudecode
 Summary(tr):	Arþivleme ve kabuk araçlarý
 Name:		sharutils
 Version:	4.2
-Release:	14
+Release:	15
 Copyright:	GPL
 Group:		Utilities
 Group(pl):	Narzêdzia
@@ -22,28 +22,34 @@ Prereq:		/sbin/install-info
 Buildroot:	/tmp/%{name}-%{version}-root
 
 %description
-The shar utilities can be used to encode and package a number of
-files, binary and/or text, in a special plain text format.  This
-format can safely be sent through email or other means where
-sending binary files is difficult.
+The sharutils package contains the GNU shar utilities, a set of tools for
+encoding and decoding packages of files (in binary or text format) in a
+special plain text format called shell archives (shar). This format can be
+sent through email (which can be problematic for regular binary files). The
+shar utility supports a wide range of capabilities (compressing, uuencoding,
+splitting long files for multi-part mailings, providing checksums), which
+make it very flexible at creating shar files. After the files have been
+sent, the unshar tool scans mail messages looking for shar files. Unshar
+automatically strips off mail headers and introductory text and then unpacks
+the shar files.
 
 %description -l de
-Sie können die shar-Dienstprogramme zum Verschlüsseln und Packen einer
-Reihe von Dateien (binär oder Text) in ein einfaches Textformat verwenden
-Dieses Format kann sicher per E-Mail oder andere Verfahren
-gesendet werden, bei denen das Senden von Binärdateien schwierig ist.
+Sie können die shar-Dienstprogramme zum Verschlüsseln und Packen einer Reihe
+von Dateien (binär oder Text) in ein einfaches Textformat verwenden Dieses
+Format kann sicher per E-Mail oder andere Verfahren gesendet werden, bei
+denen das Senden von Binärdateien schwierig ist.
 
 %description -l fr
-Les utilitaires shar servent à encoder et empaqueter un certain
-nombre de fichiers, binaires et/ou texte, sous un format texte
-spécial. Ce format peut être envoyé sans problème par courrier ou
-par d'autres moyens où l'envoi de fichiers binaires est difficile.
+Les utilitaires shar servent à encoder et empaqueter un certain nombre de
+fichiers, binaires et/ou texte, sous un format texte spécial. Ce format peut
+être envoyé sans problème par courrier ou par d'autres moyens où l'envoi de
+fichiers binaires est difficile.
 
 %description -l pl
 Narzêdzia shar s³u¿± do przekszta³cenia i dystrybuowania wielu plików
 binarnych i/lub tekstowych w jednym, tekstowym archiwum. Archiwum mo¿na
-nastêpnie wysy³aæ e-poczt± albo innymi metodami, które zabraniaj±
-transmisji plików binarnych, lub jest ona wysoce utrudniona.
+nastêpnie wysy³aæ e-poczt± albo innymi metodami, które zabraniaj± transmisji
+plików binarnych, lub jest ona wysoce utrudniona.
 
 %description -l tr
 shar araçlarý, derlemiþ ya da metin biçimindeki dosyalarý düz metin
@@ -66,8 +72,6 @@ ya da derlenmiþ dosyalarýn gönderilmesinin sorun çýkardýðý diðer programlar
 
 LDFLAGS="-s"; export LDFLAGS
 %configure \
-	--mandir=%{_mandir} \
-	--infodir=%{_infodir} \
 	--enable-nsl \
 	--without-gnu-gettext
 
@@ -89,12 +93,10 @@ gzip -9nf $RPM_BUILD_ROOT%{_infodir}/{sharutils*,remsync*} \
 %find_lang %{name}
 
 %post
-/sbin/install-info %{_infodir}/sharutils.info.gz /etc/info-dir
+/usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
 
-%preun
-if [ $1 = 0 ]; then
-	/sbin/install-info --delete %{_infodir}/sharutils.info.gz /etc/info-dir
-fi
+%postun
+/usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
