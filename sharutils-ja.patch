@@ -1,0 +1,22 @@
+--- configure.in~	Mon May 20 00:03:55 2002
++++ configure.in	Mon May 20 00:03:55 2002
+@@ -11,7 +11,7 @@
+ 
+ PACKAGE=sharutils
+ VERSION=4.2.1
+-ALL_LINGUAS="de fr ja_JP.EUC nl pl pt sv"
++ALL_LINGUAS="de fr ja nl pl pt sv"
+ PROGRAMS="shar unshar"
+ SCRIPTS="mail-files mailshar"
+ MAN1PAGES="shar unshar"
+--- configure~	Mon May 20 00:03:56 2002
++++ configure	Mon May 20 00:03:56 2002
+@@ -547,7 +547,7 @@
+ 
+ PACKAGE=sharutils
+ VERSION=4.2.1
+-ALL_LINGUAS="de fr ja_JP.EUC nl pl pt sv"
++ALL_LINGUAS="de fr ja nl pl pt sv"
+ PROGRAMS="shar unshar"
+ SCRIPTS="mail-files mailshar"
+ MAN1PAGES="shar unshar"
