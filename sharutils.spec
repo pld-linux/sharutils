@@ -76,12 +76,12 @@ LDFLAGS="-s"; export LDFLAGS
 	--enable-nsl \
 	--without-gnu-gettext
 
-make all localedir=%{_datadir}/locale
+%{__make} all localedir=%{_datadir}/locale
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-make install install-man \
+%{__make} install install-man \
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
 	bindir=$RPM_BUILD_ROOT%{_bindir} \
 	mandir=$RPM_BUILD_ROOT%{_mandir} \
