@@ -26,7 +26,7 @@ Patch8:		%{name}-ja.patch
 Patch9:		%{name}-uudecode.patch
 #BuildRequires:	autoconf
 #BuildRequires:	automake
-#BuildRequires:	gettext-devel
+BuildRequires:	gettext-devel
 BuildRequires:	texinfo
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
