@@ -8,7 +8,7 @@ Version:	4.2
 Release:	14
 Copyright:	GPL
 Group:		Utilities
-Group(pl):	U¿ytki
+Group(pl):	Narzêdzia
 Source:		ftp://prep.ai.mit.edu/pub/gnu/%{name}-%{version}.tar.gz
 Patch0:		%{name}.patch
 Patch1:		%{name}-pl.patch
