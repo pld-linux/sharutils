@@ -19,7 +19,7 @@ Patch5:		sharutils-spaces.patch
 Patch6:		sharutils-sh.patch
 Patch7:		sharutils-tmpfix.patch
 Prereq:		/usr/sbin/fix-info-dir
-Buildroot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The sharutils package contains the GNU shar utilities, a set of tools for
