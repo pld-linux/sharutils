@@ -46,7 +46,7 @@ fichiers, binaires et/ou texte, sous un format texte spécial. Ce format peut
 fichiers binaires est difficile.
 
 %description -l pl
-Narzêdzia shar s³u¿± do przekszta³cenia i dystrybuowania wielu plików
+Narzêdzia shar s³u¿± do przekszta³cania i dystrybucji wielu plików
 binarnych i/lub tekstowych w jednym, tekstowym archiwum. Archiwum mo¿na
 nastêpnie wysy³aæ e-poczt± albo innymi metodami, które zabraniaj± transmisji
 plików binarnych, lub jest ona wysoce utrudniona.
