@@ -1,0 +1,16 @@
+--- sharutils-4.2.orig/src/mail-files.in
++++ sharutils-4.2/src/mail-files.in
+@@ -1,4 +1,4 @@
+-#! @SH@
++#!/bin/sh
+ # Mail a list of files, as they are.
+ # Copyright (C) 1990, 1995 Free Software Foundation, Inc.
+ # François Pinard <pinard@iro.umontreal.ca>, 1991.
+--- sharutils-4.2.orig/src/mailshar.in
++++ sharutils-4.2/src/mailshar.in
+@@ -1,4 +1,4 @@
+-#! @SH@
++#!/bin/sh
+ # Mail a multi-part shar from a list of files.
+ # Copyright (C) 1990, 1994, 1995 Free Software Foundation, Inc.
+ # François Pinard <pinard@iro.umontreal.ca>, 1991.

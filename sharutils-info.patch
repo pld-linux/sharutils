@@ -1,0 +1,245 @@
+diff -Nru sharutils-4.2/doc/remsync.texi sharutils-4.2.new/doc/remsync.texi
+--- sharutils-4.2/doc/remsync.texi	Fri Dec  1 00:15:37 1995
++++ sharutils-4.2.new/doc/remsync.texi	Sat Jun 19 10:40:58 1999
+@@ -85,11 +85,11 @@
+ 
+ Quick start at using @code{remsync}
+ 
+-* Invoking remsync::    The @code{remsync} command and arguments
++* remsync::		The @code{remsync} command and arguments
+ 
+ Specifications of program @code{remsync}
+ 
+-* Invoking remsync::    The @code{remsync} command and arguments
++* remsync::		The @code{remsync} command and arguments
+ * Conveniences::        Automatic mechanisms in the @code{remsync} program
+ * Commands::            Commands for @code{remsync}
+ 
+@@ -100,9 +100,9 @@
+ 
+ Specifications of other service programs
+ 
+-* Invoking mailshar::   The @code{mailshar} command and arguments
+-* Invoking mail-files::  The @code{mail-files} command and arguments
+-* Invoking find-mailer::  The @code{find-mailer} command and arguments
++* mailshar::		The @code{mailshar} command and arguments
++* mail-files::		The @code{mail-files} command and arguments
++* find-mailer::		The @code{find-mailer} command and arguments
+ 
+ Related file formats
+ 
+@@ -215,12 +215,12 @@
+ @chapter Specifications of program @code{remsync}
+ 
+ @menu
+-* Invoking remsync::    The @code{remsync} command and arguments
++* remsync::		The @code{remsync} command and arguments
+ * Conveniences::        Automatic mechanisms in the @code{remsync} program
+ * Commands::            Commands for @code{remsync}
+ @end menu
+ 
+-@node Invoking remsync, Conveniences, Remsync, Remsync
++@node remsync, Conveniences, Remsync, Remsync
+ @section The @code{remsync} command and arguments
+ 
+ At the shell prompt, calling the command @code{remsync} without any
+@@ -259,7 +259,7 @@
+ * Commands::            Commands for @code{remsync}
+ @end menu
+ 
+-@node Conveniences, Commands, Invoking remsync, Remsync
++@node Conveniences, Commands, remsync, Remsync
+ @section Automatic mechanisms in the @code{remsync} program
+ 
+ The following points apply to many of the @code{remsync} commands.
+@@ -455,18 +455,18 @@
+ @chapter Specifications of other service programs
+ 
+ @menu
+-* Invoking mailshar::   The @code{mailshar} command and arguments
+-* Invoking mail-files::  The @code{mail-files} command and arguments
+-* Invoking find-mailer::  The @code{find-mailer} command and arguments
++* mailshar::		The @code{mailshar} command and arguments
++* mail-files::		The @code{mail-files} command and arguments
++* find-mailer::		The @code{find-mailer} command and arguments
+ @end menu
+ 
+-@node Invoking mailshar, Invoking mail-files, Services, Services
++@node mailshar, mail-files, Services, Services
+ @section The @code{mailshar} command and arguments
+ 
+-@node Invoking mail-files, Invoking find-mailer, Invoking mailshar, Services
++@node mail-files, find-mailer, mailshar, Services
+ @section The @code{mail-files} command and arguments
+ 
+-@node Invoking find-mailer,  , Invoking mail-files, Services
++@node find-mailer,  ,mail-files, Services
+ @section The @code{find-mailer} command and arguments
+ 
+ @node Formats, Miscellaneous, Services, Top
+diff -Nru sharutils-4.2/doc/sharutils.texi sharutils-4.2.new/doc/sharutils.texi
+--- sharutils-4.2/doc/sharutils.texi	Sat Nov 25 03:42:52 1995
++++ sharutils-4.2.new/doc/sharutils.texi	Sat Jun 19 23:08:32 1999
+@@ -16,16 +16,17 @@
+ 
+ @ifinfo
+ @format
+-START-INFO-DIR-ENTRY
+-* Shar utilities: (sharutils).          GNU shar utilities.
+-* mail-files: (sharutils)mail-files invocation. Send files to remote site.
+-* mailshar: (sharutils)mailshar invocation.     Make and send a shell archive.
+-* remsync: (sharutils)remsync invocation.       Synchronize remote files.
+-* shar: (sharutils)shar invocation.             Make a shell archive.
+-* unshar: (sharutils)unshar invocation.         Explode a shell archive.
+-* uudecode: (sharutils)uudecode invocation.     Restore file from 7-bits.
+-* uuencode: (sharutils)uuencode invocation.     Force binary file to 7-bits.
+-END-INFO-DIR-ENTRY
++@dircategory File utilities:
++@direntry
++* Shar utilities: (sharutils)		GNU shar utilities
++* mail-files: (sharutils)mail-files	Send files to remote site
++* mailshar: (sharutils)mailshar		Make and send a shell archive
++* remsync: (sharutils)remsync		Synchronize remote files
++* shar: (sharutils)shar			Make a shell archive
++* unshar: (sharutils)unshar		Explode a shell archive
++* uudecode: (sharutils)uudecode		Restore file from 7-bits
++* uuencode: (sharutils)uuencode		Force binary file to 7-bits
++@end direntry
+ @end format
+ @end ifinfo
+ 
+@@ -95,8 +96,8 @@
+ 
+ @menu
+ * Introduction::                Introduction to both programs
+-* shar invocation::             Invoking the @code{shar} program
+-* unshar invocation::           Invoking the @code{unshar} program
++* shar::			Invoking the @code{shar} program
++* unshar::			Invoking the @code{unshar} program
+ * Miscellaneous::               Miscellaneous considerations
+ 
+  --- The Detailed Node Listing ---
+@@ -113,7 +114,7 @@
+ 
+ @end ifinfo
+ 
+-@node Introduction, shar invocation, Top, Top
++@node Introduction, shar, Top, Top
+ @chapter Introduction to both programs
+ 
+ GNU @code{shar} makes so-called shell archives out of many files,
+@@ -123,13 +124,13 @@
+ in manufacturing shars and in specifying shar @emph{smartness}.  For
+ example, @code{shar} may compress files, uuencode binary files, split
+ long files and construct multi-part mailings, ensure correct unsharing
+-order, and provide simplistic checksums.  @xref{shar invocation}.
++order, and provide simplistic checksums.  @xref{shar}.
+ 
+ GNU @code{unshar} scans a set of mail messages looking for the start
+ of shell archives.  It will automatically strip off the mail headers
+ and other introductory text.  The archive bodies are then unpacked by
+ a copy of the shell.  @code{unshar} may also process files containing
+-concatenated shell archives.  @xref{unshar invocation}.
++concatenated shell archives.  @xref{unshar}.
+ 
+ GNU @code{shar} has a long history.  All along this long road, numerous
+ users contributed various improvements.  The file @file{THANKS}, from
+@@ -150,7 +151,7 @@
+ Mail suggestions and bug reports (including documentation errors)
+ for these programs to @file{bug-gnu-utils@@prep.ai.mit.edu}.
+ 
+-@node shar invocation, unshar invocation, Introduction, Top
++@node shar, unshar, Introduction, Top
+ @chapter Invoking the @code{shar} program
+ @pindex shar
+ 
+@@ -198,7 +199,7 @@
+ * Kinds::                       Producing different kinds of shar
+ @end menu
+ 
+-@node Selecting, Splitting, shar invocation, shar invocation
++@node Selecting, Splitting, shar, shar
+ @section Selecting files
+ 
+ @table @code
+@@ -209,7 +210,7 @@
+ @code{-T}, @code{-z} and @code{-Z} may be embedded, and files to
+ the right of the option will be processed in the specified mode.
+ Without the @code{-p} option, embedded options would be interpreted
+-as file names.  @xref{Stocking} for more information on these options.
++as file names. @xref{Stocking}, for more information on these options.
+ 
+ @item -S
+ @itemx --stdin-file-list
+@@ -230,7 +231,7 @@
+ 
+ @end table
+ 
+-@node Splitting, Headers, Selecting, shar invocation
++@node Splitting, Headers, Selecting, shar
+ @section Splitting output
+ 
+ @table @code
+@@ -260,7 +261,7 @@
+ in the correct order.  If the recipient of the shell archives wants to
+ put all of them in a single folder, she shall save them in the correct
+ order for @code{unshar}, used with option @code{-e}, to unpack them
+-all at once.  @xref{unshar invocation}.
++all at once.  @xref{unshar}.
+ 
+ For people used to saving all the shell archives into a single mail
+ folder, care must be taken to save them in the appropriate order.
+@@ -271,7 +272,7 @@
+ 
+ @end table
+ 
+-@node Headers, Stocking, Splitting, shar invocation
++@node Headers, Stocking, Splitting, shar
+ @section Controlling the shar headers
+ 
+ @table @code
+@@ -325,7 +326,7 @@
+ 
+ @end table
+ 
+-@node Stocking, Transmission, Headers, shar invocation
++@node Stocking, Transmission, Headers, shar
+ @section Selecting how files are stocked
+ 
+ @table @code
+@@ -405,7 +406,7 @@
+ 
+ @end table
+ 
+-@node Transmission, Kinds, Stocking, shar invocation
++@node Transmission, Kinds, Stocking, shar
+ @section Protecting against transmission errors
+ 
+ Transmission of shell archives is not always free of errors.  So one
+@@ -450,7 +451,7 @@
+ 
+ @end table
+ 
+-@node Kinds,  , Transmission, shar invocation
++@node Kinds,  , Transmission, shar
+ @section Producing different kinds of shars
+ 
+ @table @code
+@@ -541,7 +542,7 @@
+ 
+ @end table
+ 
+-@node unshar invocation, Miscellaneous, shar invocation, Top
++@node unshar, Miscellaneous, shar, Top
+ @chapter Invoking the @code{unshar} program
+ @pindex unshar
+ 
+@@ -607,7 +608,7 @@
+ 
+ @end table
+ 
+-@node Miscellaneous,  , unshar invocation, Top
++@node Miscellaneous,  , unshar, Top
+ @chapter Miscellaneous considerations
+ 
+ Here is a place-holder for many considerations which do not fit

@@ -603,3 +603,15 @@ diff -Nur sharutils-4.2/po/pl.po sharutils-4.2.pld/po/pl.po
 +#: src/uuencode.c:297
 +msgid "Write error"
 +msgstr "B³±d zapisu"
+diff -Nru sharutils-4.2/configure sharutils-4.2.new/configure
+--- sharutils-4.2/configure	Mon Jun 21 16:48:31 1999
++++ sharutils-4.2.new/configure	Mon Dec  4 01:44:54 1995
+@@ -547,7 +547,7 @@
+ 
+ PACKAGE=sharutils
+ VERSION=4.2
+-ALL_LINGUAS="de fr ja_JP.EUC nl pt sv"
++ALL_LINGUAS="de fr ja_JP.EUC nl pl pt sv"
+ PROGRAMS="shar unshar"
+ SCRIPTS="mail-files mailshar"
+ MAN1PAGES="shar unshar"
