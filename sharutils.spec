@@ -80,7 +80,8 @@ make install install-man \
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
 	bindir=$RPM_BUILD_ROOT%{_bindir} \
 	mandir=$RPM_BUILD_ROOT%{_mandir} \
-	infodir=$RPM_BUILD_ROOT%{_infodir}
+	infodir=$RPM_BUILD_ROOT%{_infodir} \
+	localedir=$RPM_BUILD_ROOT%{_datadir}/locale
 
 gzip -9nf $RPM_BUILD_ROOT%{_infodir}/{sharutils*,remsync*} \
 	$RPM_BUILD_ROOT%{_mandir}/man?/* ChangeLog NEWS
