@@ -5,12 +5,13 @@ Summary(pl):	Narzêdzia z GNU shar - shar, unshar, uuencode, uudecode
 Summary(tr):	Arþivleme ve kabuk araçlarý
 Name:		sharutils
 Version:	4.2.1
-Release:	8
+Release:	9
 License:	GPL
 Group:		Applications
 Group(de):	Applikationen
 Group(pl):	Aplikacje
 Source0:	ftp://ftp.gnu.org/pub/gnu/sharutils/%{name}-%{version}.tar.gz
+Source1:	%{name}-non-english-man-pages.tar.bz2
 Patch0:		%{name}.patch
 Patch1:		%{name}-pl.patch
 Patch2:		%{name}-info.patch
@@ -19,9 +20,9 @@ Patch4:		%{name}-spaces.patch
 Patch5:		%{name}-sh.patch
 Patch6:		%{name}-tmpfix.patch
 Patch7:		%{name}-autoconf.patch
-BuildRequires:	autoconf
-BuildRequires:	automake
-BuildRequires:	gettext-devel
+#BuildRequires:	autoconf
+#BuildRequires:	automake
+#BuildRequires:	gettext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -52,9 +53,9 @@ moyens où l'envoi de fichiers binaires est difficile.
 %description -l pl
 Narzêdzia shar s³u¿± do przekszta³cania i dystrybucji wielu plików
 binarnych i/lub tekstowych w jednym, tekstowym archiwum. Archiwum
-mo¿na nastêpnie wysy³aæ e-poczt± albo innymi metodami, które
-zabraniaj± transmisji plików binarnych, lub jest ona wysoce
-utrudniona.
+mo¿na nastêpnie wysy³aæ poczt± elektroniczn± albo innymi metodami,
+które uniemo¿liwiaj± lub znacznie utrudniaj± transmisjê plików
+binarnych.
 
 %description -l tr
 shar araçlarý, derlemiþ ya da metin biçimindeki dosyalarý düz metin
@@ -63,7 +64,7 @@ ya da derlenmiþ dosyalarýn gönderilmesinin sorun çýkardýðý diðer
 programlar üzerinden güvenli bir þekilde gönderilebilir.
 
 %prep
-%setup  -q
+%setup -q -a1
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
@@ -93,6 +94,11 @@ rm -rf $RPM_BUILD_ROOT
 	infodir=$RPM_BUILD_ROOT%{_infodir} \
 	localedir=$RPM_BUILD_ROOT%{_datadir}/locale
 
+install -d $RPM_BUILD_ROOT%{_mandir}/{pl/man5,ja/man{1,5}}
+install man/ja/man1/* $RPM_BUILD_ROOT%{_mandir}/ja/man1
+install man/ja/man5/* $RPM_BUILD_ROOT%{_mandir}/ja/man5
+install man/pl/man5/* $RPM_BUILD_ROOT%{_mandir}/pl/man5
+
 gzip -9nf ChangeLog NEWS
 
 %find_lang %{name}
@@ -112,3 +118,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_infodir}/*info*
 %{_mandir}/man[15]/*
+%lang(ja) %{_mandir}/ja/man?/*
+%lang(pl) %{_mandir}/pl/man?/*
