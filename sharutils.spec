@@ -76,10 +76,10 @@ programlar üzerinden güvenli bir þekilde gönderilebilir.
 chmod -R u+w *
 
 %build
-gettextize --copy --force
-aclocal
-autoconf
-%configure
+#gettextize --copy --force
+#aclocal
+#autoconf
+%configure2_13
 
 %{__make} all localedir=%{_datadir}/locale
 
