@@ -1,3 +1,27 @@
+diff -uNr sharutils-4.2.1.orig/configure.in sharutils-4.2.1/configure.in
+--- sharutils-4.2.1.orig/configure.in	Mon May 20 00:03:55 2002
++++ sharutils-4.2.1/configure.in	Mon May 20 00:03:55 2002
+@@ -11,7 +11,7 @@
+ 
+ PACKAGE=sharutils
+ VERSION=4.2.1
+-ALL_LINGUAS="de fr ja_JP.EUC nl pl pt sv"
++ALL_LINGUAS="de fr ja nl pl pt sv"
+ PROGRAMS="shar unshar"
+ SCRIPTS="mail-files mailshar"
+ MAN1PAGES="shar unshar"
+diff -uNr sharutils-4.2.1.orig/configure sharutils-4.2.1/configure
+--- sharutils-4.2.1.orig/configure	Mon May 20 00:03:56 2002
++++ sharutils-4.2.1/configure	Mon May 20 00:03:56 2002
+@@ -547,7 +547,7 @@
+ 
+ PACKAGE=sharutils
+ VERSION=4.2.1
+-ALL_LINGUAS="de fr ja_JP.EUC nl pl pt sv"
++ALL_LINGUAS="de fr ja nl pl pt sv"
+ PROGRAMS="shar unshar"
+ SCRIPTS="mail-files mailshar"
+ MAN1PAGES="shar unshar"
 diff -uNr sharutils-4.2.1.orig/po/de.po sharutils-4.2.1/po/de.po
 --- sharutils-4.2.1.orig/po/de.po	Mon Dec  4 17:55:55 1995
 +++ sharutils-4.2.1/po/de.po	Mon Sep  1 23:04:53 2003
