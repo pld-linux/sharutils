@@ -74,6 +74,8 @@ make install \
 gzip -9nf $RPM_BUILD_ROOT%{_infodir}/{sharutils*,remsync*}
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man[15]/* ChangeLog NEWS
 
+%find_lang %{name}
+
 %post
 /sbin/install-info %{_infodir}/sharutils.info.gz /etc/info-dir
 
@@ -85,7 +87,7 @@ fi
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc {ChangeLog,NEWS}.gz
 
@@ -93,14 +95,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %{_infodir}/*.info.gz
 %{_mandir}/man[15]/*
-
-%lang(de) /usr/share/locale/de/LC_MESSAGES/sharutils.mo
-%lang(fr) /usr/share/locale/fr/LC_MESSAGES/sharutils.mo
-%lang(ja) /usr/share/locale/ja_JP.EUC/LC_MESSAGES/sharutils.mo
-%lang(nl) /usr/share/locale/nl/LC_MESSAGES/sharutils.mo
-%lang(pl) /usr/share/locale/pl/LC_MESSAGES/sharutils.mo
-%lang(pt) /usr/share/locale/pt/LC_MESSAGES/sharutils.mo
-%lang(sv) /usr/share/locale/sv/LC_MESSAGES/sharutils.mo
 
 %changelog
 * Thu May 20 1999 Wojtek ¦lusarczyk <wojtek@shadow.eu.org>
