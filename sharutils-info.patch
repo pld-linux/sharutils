@@ -96,14 +96,14 @@ diff -Nru sharutils-4.2/doc/sharutils.texi sharutils-4.2.new/doc/sharutils.texi
 -END-INFO-DIR-ENTRY
 +@dircategory File utilities:
 +@direntry
-+* Shar utilities: (sharutils)		GNU shar utilities
-+* mail-files: (sharutils)mail-files	Send files to remote site
-+* mailshar: (sharutils)mailshar		Make and send a shell archive
-+* remsync: (sharutils)remsync		Synchronize remote files
-+* shar: (sharutils)shar			Make a shell archive
-+* unshar: (sharutils)unshar		Explode a shell archive
-+* uudecode: (sharutils)uudecode		Restore file from 7-bits
-+* uuencode: (sharutils)uuencode		Force binary file to 7-bits
++* Shar utilities: (sharutils).		GNU shar utilities
++* mail-files: (sharutils)mail-files.	Send files to remote site
++* mailshar: (sharutils)mailshar.	Make and send a shell archive
++* remsync: (sharutils)remsync.		Synchronize remote files
++* shar: (sharutils)shar.		Make a shell archive
++* unshar: (sharutils)unshar.		Explode a shell archive
++* uudecode: (sharutils)uudecode.	Restore file from 7-bits
++* uuencode: (sharutils)uuencode.	Force binary file to 7-bits
 +@end direntry
  @end format
  @end ifinfo
