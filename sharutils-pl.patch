@@ -1,18 +1,30 @@
-diff -Nur sharutils-4.2/configure.in sharutils-4.2.pld/configure.in
---- sharutils-4.2/configure.in	Mon Dec  4 01:44:20 1995
-+++ sharutils-4.2.pld/configure.in	Thu May 20 16:47:58 1999
-@@ -11,7 +11,7 @@
+diff -Nru sharutils-4.2.1/configure sharutils-4.2.1.new/configure
+--- sharutils-4.2.1/configure	Fri Sep  8 08:33:40 2000
++++ sharutils-4.2.1.new/configure	Fri Sep  8 08:35:03 2000
+@@ -547,7 +547,7 @@
  
  PACKAGE=sharutils
- VERSION=4.2
+ VERSION=4.2.1
 -ALL_LINGUAS="de fr ja_JP.EUC nl pt sv"
 +ALL_LINGUAS="de fr ja_JP.EUC nl pl pt sv"
  PROGRAMS="shar unshar"
  SCRIPTS="mail-files mailshar"
  MAN1PAGES="shar unshar"
-diff -Nur sharutils-4.2/po/pl.po sharutils-4.2.pld/po/pl.po
---- sharutils-4.2/po/pl.po	Thu Jan  1 01:00:00 1970
-+++ sharutils-4.2.pld/po/pl.po	Thu May 20 16:48:08 1999
+diff -Nru sharutils-4.2.1/configure.in sharutils-4.2.1.new/configure.in
+--- sharutils-4.2.1/configure.in	Fri Sep  8 08:33:40 2000
++++ sharutils-4.2.1.new/configure.in	Fri Sep  8 08:34:42 2000
+@@ -11,7 +11,7 @@
+ 
+ PACKAGE=sharutils
+ VERSION=4.2.1
+-ALL_LINGUAS="de fr ja_JP.EUC nl pt sv"
++ALL_LINGUAS="de fr ja_JP.EUC nl pl pt sv"
+ PROGRAMS="shar unshar"
+ SCRIPTS="mail-files mailshar"
+ MAN1PAGES="shar unshar"
+diff -Nru sharutils-4.2.1/po/pl.po sharutils-4.2.1.new/po/pl.po
+--- sharutils-4.2.1/po/pl.po	Thu Jan  1 01:00:00 1970
++++ sharutils-4.2.1.new/po/pl.po	Fri Sep  8 07:55:59 2000
 @@ -0,0 +1,589 @@
 +msgid ""
 +msgstr ""
@@ -603,15 +615,3 @@ diff -Nur sharutils-4.2/po/pl.po sharutils-4.2.pld/po/pl.po
 +#: src/uuencode.c:297
 +msgid "Write error"
 +msgstr "B³±d zapisu"
-diff -Nru sharutils-4.2/configure sharutils-4.2.new/configure
---- sharutils-4.2/configure	Mon Jun 21 16:48:31 1999
-+++ sharutils-4.2.new/configure	Mon Dec  4 01:44:54 1995
-@@ -547,7 +547,7 @@
- 
- PACKAGE=sharutils
- VERSION=4.2
--ALL_LINGUAS="de fr ja_JP.EUC nl pt sv"
-+ALL_LINGUAS="de fr ja_JP.EUC nl pl pt sv"
- PROGRAMS="shar unshar"
- SCRIPTS="mail-files mailshar"
- MAN1PAGES="shar unshar"
