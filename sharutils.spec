@@ -10,8 +10,14 @@ Copyright:	GPL
 Group:		Utilities
 Group(pl):	Narzêdzia
 Source:		ftp://prep.ai.mit.edu/pub/gnu/%{name}-%{version}.tar.gz
-Patch0:		%{name}.patch
-Patch1:		%{name}-pl.patch
+Patch0:		sharutils.patch
+Patch1:		sharutils-pl.patch
+Patch2:		sharutils-info.patch
+Patch3:		sharutils-autoconf_fix.patch
+Patch4:		sharutils-y2k.patch
+Patch5:		sharutils-spaces.patch
+Patch6:		sharutils-sh.patch
+Patch7:		sharutils-tmpfix.patch
 Prereq:		/sbin/install-info
 Buildroot:	/tmp/%{name}-%{version}-root
 
@@ -46,33 +52,38 @@ ya da derlenmiþ dosyalarýn gönderilmesinin sorun çýkardýðý diðer programlar
 üzerinden güvenli bir þekilde gönderilebilir.
 
 %prep
-%setup -q
+%setup  -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
+%patch3 -p1
+%patch4 -p1
+%patch5 -p1
+%patch6 -p1
+%patch7 -p1
 
 %build
-autoheader && autoconf 
-CFLAGS=$RPM_OPT_FLAGS LDFLAGS=-s \
-    ./configure \
-	--prefix=%{_prefix} \
+
+LDFLAGS="-s"; export LDFLAGS
+%configure \
+	--mandir=%{_mandir} \
 	--infodir=%{_infodir} \
 	--enable-nsl \
-	--with-gnu-gettext %{_target_platform}
+	--without-gnu-gettext
 
-make clean; make all;
+make all localedir=%{_datadir}/locale
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-make install-man \
-    mandir=$RPM_BUILD_ROOT%{_mandir}
+make install install-man \
+	prefix=$RPM_BUILD_ROOT%{_prefix} \
+	bindir=$RPM_BUILD_ROOT%{_bindir} \
+	mandir=$RPM_BUILD_ROOT%{_mandir} \
+	infodir=$RPM_BUILD_ROOT%{_infodir}
 
-make install \
-    prefix=$RPM_BUILD_ROOT%{_prefix} \
-    infodir=$RPM_BUILD_ROOT%{_infodir}
-
-gzip -9nf $RPM_BUILD_ROOT%{_infodir}/{sharutils*,remsync*}
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man[15]/* ChangeLog NEWS
+gzip -9nf $RPM_BUILD_ROOT%{_infodir}/{sharutils*,remsync*} \
+	$RPM_BUILD_ROOT%{_mandir}/man?/* ChangeLog NEWS
 
 %find_lang %{name}
 
@@ -81,7 +92,7 @@ gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man[15]/* ChangeLog NEWS
 
 %preun
 if [ $1 = 0 ]; then
-    /sbin/install-info --delete %{_infodir}/sharutils.info.gz /etc/info-dir
+	/sbin/install-info --delete %{_infodir}/sharutils.info.gz /etc/info-dir
 fi
 
 %clean
