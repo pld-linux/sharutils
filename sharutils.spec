@@ -103,17 +103,13 @@ programlar üzerinden güvenli bir þekilde gönderilebilir.
 %configure
 
 %{__make} all
-make -C po pl.gmo
+%{__make} -C po pl.gmo
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install install-man \
-	prefix=$RPM_BUILD_ROOT%{_prefix} \
-	bindir=$RPM_BUILD_ROOT%{_bindir} \
-	mandir=$RPM_BUILD_ROOT%{_mandir} \
-	infodir=$RPM_BUILD_ROOT%{_infodir} \
-	localedir=$RPM_BUILD_ROOT%{_datadir}/locale
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{_mandir}/{pl/man5,ja/man{1,5}}
 install man/ja/man1/* $RPM_BUILD_ROOT%{_mandir}/ja/man1
