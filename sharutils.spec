@@ -9,17 +9,15 @@ Summary(tr):	Arşivleme ve kabuk araçları
 Summary(uk):	õÔÉÌ¦ÔÉ GNU shar ÄÌÑ ÓÔ×ÏÒÅÎÎÑ ÔÁ ÒÏÚĞÁËÏ×ËÉ shell-ÁÒÈ¦×¦×
 Name:		sharutils
 Version:	4.3.80
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		Applications
 Source0:	ftp://ftp.gnu.org/pub/gnu/sharutils/REL-%{version}/%{name}-%{version}.tar.bz2
 # Source0-md5:	81449e6080bb28f6dd8d377fa7a14f12
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source1-md5:	336f405f69324d129a6ccd3b66f8eb6c
-Patch1:		%{name}-pl.patch
-Patch5:		%{name}-sh.patch
-# todo:
-Patch6:		%{name}-tmpfix.patch
+Patch0:		%{name}-pl.patch
+Patch1:		%{name}-sh.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
@@ -90,10 +88,8 @@ programlar üzerinden güvenli bir şekilde gönderilebilir.
 
 %prep
 %setup -q -a1
+%patch0 -p1
 %patch1 -p1
-%patch5 -p1
-# %patch6 -p1
-#%patch10 -p1
 
 %build
 %{__gettextize}
