@@ -8,12 +8,12 @@ Summary(ru):	õÔÉÌÉÔÙ GNU shar ÄÌÑ ÓÏÚÄÁÎÉÑ É ÒÁÓĞÁËÏ×ËÉ shell-ÁÒÈÉ×Ï×
 Summary(tr):	Arşivleme ve kabuk araçları
 Summary(uk):	õÔÉÌ¦ÔÉ GNU shar ÄÌÑ ÓÔ×ÏÒÅÎÎÑ ÔÁ ÒÏÚĞÁËÏ×ËÉ shell-ÁÒÈ¦×¦×
 Name:		sharutils
-Version:	4.4
+Version:	4.5
 Release:	1
 License:	GPL
 Group:		Applications
 Source0:	ftp://ftp.gnu.org/pub/gnu/sharutils/REL-%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	0ad657c2dd04793b1dcd8b8135cd6395
+# Source0-md5:	72d6072152c67af299e7a193bb78f258
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source1-md5:	336f405f69324d129a6ccd3b66f8eb6c
 Patch0:		%{name}-pl.patch
@@ -91,6 +91,8 @@ programlar üzerinden güvenli bir şekilde gönderilebilir.
 %patch0 -p1
 %patch1 -p1
 
+rm -f po/stamp-po
+
 %build
 %{__gettextize}
 %{__aclocal} -I m4
@@ -99,7 +101,6 @@ programlar üzerinden güvenli bir şekilde gönderilebilir.
 %configure
 
 %{__make} all
-%{__make} -C po pl.gmo
 
 %install
 rm -rf $RPM_BUILD_ROOT
