@@ -1,6 +1,6 @@
---- sharutils-4.5/po/pl.po.orig	1970-01-01 01:00:00.000000000 +0100
-+++ sharutils-4.5/po/pl.po	2005-08-07 13:29:36.323539760 +0200
-@@ -0,0 +1,770 @@
+--- sharutils-4.5.1/po/pl.po.orig	1970-01-01 01:00:00.000000000 +0100
++++ sharutils-4.5.1/po/pl.po	2005-09-13 19:36:18.562220968 +0200
+@@ -0,0 +1,772 @@
 +# Polish translation for sharutils.
 +# Copyright (C) 2005 Free Software Foundation, Inc.
 +# This file is distributed under the same license as the sharutils package.
@@ -9,10 +9,10 @@
 +#
 +msgid ""
 +msgstr ""
-+"Project-Id-Version: sharutils 4.5\n"
++"Project-Id-Version: sharutils 4.5.1\n"
 +"Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
-+"POT-Creation-Date: 2005-08-03 21:15-0700\n"
-+"PO-Revision-Date: 2005-08-07 13:20+0200\n"
++"POT-Creation-Date: 2005-08-13 14:31-0700\n"
++"PO-Revision-Date: 2005-09-13 19:33+0200\n"
 +"Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
 +"Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
 +"MIME-Version: 1.0\n"
@@ -82,290 +82,292 @@
 +msgid "memory exhausted"
 +msgstr "pamiêæ wyczerpana"
 +
-+#: src/shar.c:635
++#: src/shar.c:543
++msgid "Note: not verifying md5sums.  Consider installing GNU coreutils."
++msgstr "Uwaga: sumy md5 nie s± sprawdzane. Do tego potrzebne s± GNU coreutils."
++
++#: src/shar.c:597
 +msgid "WARNING: not restoring timestamps.  Consider getting and"
 +msgstr "UWAGA: nie przywrócono znacznika czasu."
 +
-+#: src/shar.c:637
-+msgid "installing GNU \\`touch', distributed in GNU File Utilities..."
-+msgstr "Do tego potrzebny jest GNU \\`touch' z pakietu GNU File Utilities..."
++#: src/shar.c:599
++msgid "installing GNU `touch'\\'', distributed in GNU File Utilities..."
++msgstr "Do tego potrzebny jest GNU `touch'\\'' z pakietu GNU File Utilities..."
 +
-+#: src/shar.c:648
++#: src/shar.c:609
 +msgid "failed to create locking directory"
 +msgstr "nie uda³o siê utworzyæ katalogu blokuj±cego"
 +
-+#. uwaga: sk³adanie zdania ze s³ów
-+#: src/shar.c:658 src/shar.c:2413
++#: src/shar.c:619 src/shar.c:2368
 +msgid "lock directory"
 +msgstr "katalog blokuj±cy"
 +
-+#. dwa poni¿sze komunikaty dotycz± katalogu blokuj±cego lub nazwy pliku
-+#: src/shar.c:658 src/shar.c:721
++#: src/shar.c:619 src/shar.c:682
 +msgid "created"
 +msgstr "utworzony"
 +
-+#: src/shar.c:659 src/shar.c:721
++#: src/shar.c:620 src/shar.c:682
 +msgid "failed to create"
 +msgstr "nie utworzony z powodu b³êdu"
 +
-+#: src/shar.c:701
++#: src/shar.c:662
 +msgid "Too many directories for mkdir generation"
 +msgstr "Zbyt wiele katalogów dla programu mkdir"
 +
-+#: src/shar.c:785 src/shar.c:1012
++#: src/shar.c:746 src/shar.c:973
 +#, c-format
 +msgid "Cannot access %s"
 +msgstr "Brak dostêpu do %s"
 +
-+#: src/shar.c:839 src/shar.c:2127
++#: src/shar.c:800 src/shar.c:2082
 +msgid "-C is being deprecated, use -Z instead"
 +msgstr "-C jest przestarza³e, nale¿y u¿yæ opcji -Z"
 +
-+#: src/shar.c:892 src/unshar.c:377
++#: src/shar.c:853 src/unshar.c:377
 +msgid "Cannot get current directory name"
 +msgstr "Nie mo¿na pobraæ nazwy bie¿±cego katalogu"
 +
-+#: src/shar.c:978
++#: src/shar.c:939
 +msgid "Must unpack archives in sequence!"
 +msgstr "Trzeba rozpakowywaæ archiwa po kolei!"
 +
-+#: src/shar.c:979 src/shar.c:1521
++#: src/shar.c:940 src/shar.c:1482
 +msgid "Please unpack part"
 +msgstr "Proszê rozpakowaæ czê¶æ"
 +
-+#: src/shar.c:979 src/shar.c:1522
++#: src/shar.c:940 src/shar.c:1483
 +msgid "next!"
 +msgstr "jako nastêpn±!"
 +
-+#: src/shar.c:1007
++#: src/shar.c:968
 +#, c-format
 +msgid "%s: Not a regular file"
 +msgstr "%s: To nie jest zwyk³y plik"
 +
-+#: src/shar.c:1022
++#: src/shar.c:983
 +#, c-format
 +msgid "In shar: remaining size %s\n"
 +msgstr "W shar: pozosta³y rozmiar %s\n"
 +
-+#: src/shar.c:1033 src/shar.c:1427
++#: src/shar.c:994 src/shar.c:1388
 +#, c-format
 +msgid "New file, remaining %s, "
 +msgstr "Nowy plik, pozosta³o %s, "
 +
-+#: src/shar.c:1034 src/shar.c:1428
++#: src/shar.c:995 src/shar.c:1389
 +#, c-format
 +msgid "Limit still %s\n"
 +msgstr "Ograniczenie rozmiaru to nadal %s\n"
 +
-+#: src/shar.c:1050 src/shar.c:1437 src/shar.c:1641 src/shar.c:1659
++#: src/shar.c:1011 src/shar.c:1398 src/shar.c:1602 src/shar.c:1620
 +msgid "restore of"
 +msgstr "przywracanie"
 +
-+#: src/shar.c:1050 src/shar.c:1437 src/shar.c:1641 src/shar.c:1659
++#: src/shar.c:1011 src/shar.c:1398 src/shar.c:1602 src/shar.c:1620
 +msgid "failed"
 +msgstr "nie powiod³o siê"
 +
-+#: src/shar.c:1051 src/shar.c:1447
++#: src/shar.c:1012 src/shar.c:1408
 +msgid "End of part"
 +msgstr "Koniec czê¶ci"
 +
-+#: src/shar.c:1052 src/shar.c:1448
++#: src/shar.c:1013 src/shar.c:1409
 +msgid "continue with part"
 +msgstr "ci±g dalszy w czê¶ci"
 +
-+#: src/shar.c:1064 src/shar.c:1540
++#: src/shar.c:1025 src/shar.c:1501
 +#, c-format
 +msgid "Starting file %s\n"
 +msgstr "Pocz±tkowy plik %s\n"
 +
-+#: src/shar.c:1099
++#: src/shar.c:1060
 +msgid "empty"
 +msgstr "pusty"
 +
-+#: src/shar.c:1100
++#: src/shar.c:1061
 +msgid "(empty)"
 +msgstr "(pusty)"
 +
-+#: src/shar.c:1124
++#: src/shar.c:1085
 +#, c-format
 +msgid "Cannot open file %s"
 +msgstr "Nie mo¿na otworzyæ pliku %s"
 +
-+#: src/shar.c:1161
++#: src/shar.c:1122
 +msgid "compressed"
 +msgstr "skompresowany"
 +
-+#: src/shar.c:1162
++#: src/shar.c:1123
 +msgid "gzipped"
 +msgstr "skompresowany gzipem"
 +
-+#: src/shar.c:1163
++#: src/shar.c:1124
 +msgid "bzipped"
 +msgstr "skompresowany bzipem"
 +
-+#: src/shar.c:1164
++#: src/shar.c:1125
 +msgid "binary"
 +msgstr "binarny"
 +
-+#: src/shar.c:1165
++#: src/shar.c:1126
 +msgid "(compressed)"
 +msgstr "(skompresowany"
 +
-+#: src/shar.c:1166
++#: src/shar.c:1127
 +msgid "(gzipped)"
 +msgstr "(skompresowany gzipem)"
 +
-+#: src/shar.c:1167
++#: src/shar.c:1128
 +msgid "(bzipped)"
 +msgstr "(skompresowany bzipem)"
 +
-+#: src/shar.c:1168
++#: src/shar.c:1129
 +msgid "(binary)"
 +msgstr "(binarny)"
 +
-+#: src/shar.c:1181
++#: src/shar.c:1142
 +msgid "Could not fork"
 +msgstr "Nie mo¿na wykonaæ fork"
 +
-+#: src/shar.c:1186 src/shar.c:1246
++#: src/shar.c:1147 src/shar.c:1207
 +#, c-format
 +msgid "File %s (%s)"
 +msgstr "Plik %s (%s)"
 +
-+#: src/shar.c:1240
++#: src/shar.c:1201
 +msgid "text"
 +msgstr "tekst"
 +
-+#: src/shar.c:1241
++#: src/shar.c:1202
 +msgid "(text)"
 +msgstr "(tekst)"
 +
-+#: src/shar.c:1287
++#: src/shar.c:1248
 +msgid "overwriting"
 +msgstr "nadpisywanie"
 +
-+#: src/shar.c:1288
++#: src/shar.c:1249
 +msgid "overwrite"
 +msgstr "nadpisaæ"
 +
-+#: src/shar.c:1289
++#: src/shar.c:1250
 +msgid "[no, yes, all, quit] (no)?"
 +msgstr "[nie (n), tak (y), wszystko (a), wyj¶cie (q)] (n)?"
 +
-+#: src/shar.c:1290
++#: src/shar.c:1251
 +msgid "extraction aborted"
 +msgstr "rozpakowywanie przerwane"
 +
-+#: src/shar.c:1291 src/shar.c:1296
++#: src/shar.c:1252 src/shar.c:1257
 +msgid "SKIPPING"
 +msgstr "POMINIÊTO"
 +
-+#: src/shar.c:1296
++#: src/shar.c:1257
 +msgid "(file already exists)"
 +msgstr "(plik ju¿ istnieje)"
 +
-+#: src/shar.c:1314
++#: src/shar.c:1275
 +#, c-format
 +msgid "Saving %s (%s)"
 +msgstr "Zapisywanie %s (%s)"
 +
-+#: src/shar.c:1319
++#: src/shar.c:1280
 +msgid "extracting"
 +msgstr "rozpakowywanie"
 +
-+#: src/shar.c:1453
++#: src/shar.c:1414
 +msgid "End of"
 +msgstr "Koniec"
 +
-+#: src/shar.c:1454
++#: src/shar.c:1415
 +msgid "archive"
 +msgstr "archiwum"
 +
-+#: src/shar.c:1455
++#: src/shar.c:1416
 +msgid "part"
 +msgstr "czê¶ci"
 +
-+#: src/shar.c:1457 src/shar.c:1565
++#: src/shar.c:1418 src/shar.c:1526
 +msgid "File"
 +msgstr "Plik"
 +
-+#: src/shar.c:1458
++#: src/shar.c:1419
 +msgid "is continued in part"
 +msgstr "bêdzie kontynuowany w czê¶ci"
 +
-+#: src/shar.c:1518
++#: src/shar.c:1479
 +msgid "Please unpack part 1 first!"
 +msgstr "Proszê najpierw rozpakowaæ pierwsz± czê¶æ!"
 +
-+#: src/shar.c:1536
++#: src/shar.c:1497
 +msgid "STILL SKIPPING"
 +msgstr "POMIJANIE NADAL"
 +
-+#: src/shar.c:1544
++#: src/shar.c:1505
 +msgid "continuing file"
 +msgstr "ci±g dalszy pliku"
 +
-+#: src/shar.c:1565
++#: src/shar.c:1526
 +msgid "is complete"
 +msgstr "jest kompletny"
 +
-+#: src/shar.c:1574
++#: src/shar.c:1535
 +msgid "uudecoding file"
 +msgstr "dekodowanie programem uudecode"
 +
-+#: src/shar.c:1588
++#: src/shar.c:1549
 +msgid "uncompressing file"
 +msgstr "rozpakowywanie pliku programem uncompress"
 +
-+#: src/shar.c:1599
++#: src/shar.c:1560
 +msgid "gunzipping file"
 +msgstr "rozpakowywanie pliku programem gunzip"
 +
-+#: src/shar.c:1610
++#: src/shar.c:1571
 +msgid "bunzipping file"
 +msgstr "rozpakowywanie pliku programem bunzip"
 +
-+#: src/shar.c:1675
++#: src/shar.c:1630
 +msgid "MD5 check failed"
 +msgstr "Sprawdzenie sumy kontrolnej MD5 nie powiod³o siê"
 +
-+#: src/shar.c:1736
++#: src/shar.c:1691
 +msgid "original size"
 +msgstr "oryginalny rozmiar"
 +
-+#: src/shar.c:1737
++#: src/shar.c:1692
 +msgid "current size"
 +msgstr "obecny rozmiar"
 +
-+#: src/shar.c:1790
++#: src/shar.c:1745
 +msgid "allocating output file name"
 +msgstr "przydzielanie nazwy pliku wyj¶ciowego"
 +
-+#: src/shar.c:1796
++#: src/shar.c:1751
 +#, c-format
 +msgid "Opening `%s'"
 +msgstr "Otwieranie `%s'"
 +
-+#: src/shar.c:1807
++#: src/shar.c:1762
 +#, c-format
 +msgid "Closing `%s'"
 +msgstr "Zamykanie `%s'"
 +
-+#: src/shar.c:1819 src/unshar.c:313 src/uudecode.c:412 src/uuencode.c:200
++#: src/shar.c:1774 src/unshar.c:313 src/uudecode.c:412 src/uuencode.c:200
 +#, c-format
 +msgid "Try `%s --help' for more information.\n"
 +msgstr "Wywo³anie `%s --help' poda wiêcej informacji.\n"
 +
-+#: src/shar.c:1823 src/unshar.c:317
++#: src/shar.c:1778 src/unshar.c:317
 +#, c-format
 +msgid "Usage: %s [OPTION]... [FILE]...\n"
 +msgstr "Sk³adnia: %s [OPCJA]... [PLIK]...\n"
 +
-+#: src/shar.c:1824
++#: src/shar.c:1779
 +msgid "Mandatory arguments to long options are mandatory for short options too.\n"
 +msgstr "Argumenty obowi±zkowe dla opcji d³ugich obowi±zuj± równie¿ dla opcji krótkich.\n"
 +
-+#: src/shar.c:1827
++#: src/shar.c:1782
 +msgid ""
 +"\n"
 +"Giving feedback:\n"
@@ -379,7 +381,7 @@
 +"      --version           wy¶wietlenie informacji o wersji i zakoñczenie\n"
 +"  -q, --quiet, --silent   nie wypisywanie lokalnie szczegó³owych komunikatów\n"
 +
-+#: src/shar.c:1835
++#: src/shar.c:1790
 +msgid ""
 +"\n"
 +"Selecting files:\n"
@@ -391,7 +393,7 @@
 +"  -p, --intermix-type     dopuszczenie -[BTzZ] w listach plików do zmiany trybu\n"
 +"  -S, --stdin-file-list   odczyt listy plików ze standardowego wej¶cia\n"
 +
-+#: src/shar.c:1842
++#: src/shar.c:1797
 +msgid ""
 +"\n"
 +"Selecting files:\n"
@@ -403,7 +405,7 @@
 +"  -p, --intermix-type     dopuszczenie -[BTz] w listach plików do zmiany trybu\n"
 +"  -S, --stdin-file-list   odczyt listy plików ze standardowego wej¶cia\n"
 +
-+#: src/shar.c:1849
++#: src/shar.c:1804
 +msgid ""
 +"\n"
 +"Splitting output:\n"
@@ -417,7 +419,7 @@
 +"  -l, --whole-size-limit=ILE    dzielenie archiwum, nie plików, na ILE kB\n"
 +"  -L, --split-size-limit=ILE    dzielenie archiwum lub plików, na ILE kB\n"
 +
-+#: src/shar.c:1856
++#: src/shar.c:1811
 +msgid ""
 +"\n"
 +"Controlling the shar headers:\n"
@@ -449,7 +451,7 @@
 +"  -g, --level-for-gzip=POZIOM  przekazanie -POZIOM do gzipa (domy¶lnie 9)\n"
 +"  -j, --bzip2                  u¿ycie bzip2 i uuencode dla wszystkich plików\n"
 +
-+#: src/shar.c:1873
++#: src/shar.c:1828
 +msgid ""
 +"  -Z, --compress               compress and uuencode all files\n"
 +"  -b, --bits-per-code=BITS     pass -bBITS (default 12) to compress\n"
@@ -457,7 +459,7 @@
 +"  -Z, --compress               u¿ycie compress i uuencode dla wszystkich plików\n"
 +"  -b, --bits-per-code=BITÓW    przekazanie -bBITÓW (domy¶lnie 12) do compress\n"
 +
-+#: src/shar.c:1878
++#: src/shar.c:1833
 +msgid ""
 +"\n"
 +"Protecting against transmission:\n"
@@ -493,7 +495,7 @@
 +"  -f, --basename            odtwarzanie w jednym podkatalogu, bez hierarchii\n"
 +"      --no-i18n             nie tworzenie umiêdzynarodowionego skryptu\n"
 +
-+#: src/shar.c:1896
++#: src/shar.c:1851
 +msgid ""
 +"\n"
 +"Option -o is required with -l or -L, option -n is required with -a.\n"
@@ -501,56 +503,56 @@
 +"\n"
 +"Opcja -o jest wymagana przy -l lub -L, opcja -n jest wymagana przy -a.\n"
 +
-+#: src/shar.c:1901
++#: src/shar.c:1856
 +msgid "Option -g implies -z, option -b implies -Z.\n"
 +msgstr "Opcja -g implikuje -z, opcja -b implikuje -Z.\n"
 +
-+#: src/shar.c:1905
++#: src/shar.c:1860
 +msgid "Option -g implies -z.\n"
 +msgstr "Opcja -g implikuje -z.\n"
 +
 +#. TRANSLATORS: add the contact address for your translation team!
-+#: src/shar.c:1910 src/unshar.c:332 src/uudecode.c:423 src/uuencode.c:210
++#: src/shar.c:1865 src/unshar.c:332 src/uudecode.c:423 src/uuencode.c:210
 +#, c-format
 +msgid "Report bugs to <%s>.\n"
 +msgstr ""
 +"B³êdy w programie nale¿y zg³aszaæ na adres <%s>, natomiast b³êdy\n"
 +"w t³umaczeniu - na <translation-team-pl@lists.sourceforge.net>.\n"
 +
-+#: src/shar.c:1967
++#: src/shar.c:1922
 +#, c-format
 +msgid "invalid file size limit `%s'"
 +msgstr "b³êdne ograniczenie rozmiaru pliku `%s'"
 +
-+#: src/shar.c:2003
++#: src/shar.c:1958
 +#, c-format
 +msgid "invalid format (count field too wide): '%s'\n"
 +msgstr "b³êdny format (pole liczbowe zbyt szerokie): '%s'\n"
 +
-+#: src/shar.c:2064
++#: src/shar.c:2019
 +msgid "DEBUG was not selected at compile time"
 +msgstr "DEBUG nie zosta³o wybrane na etapie kompilacji"
 +
-+#: src/shar.c:2084
++#: src/shar.c:2039
 +#, c-format
 +msgid "Hard limit %s\n"
 +msgstr "Twarde ograniczenie %s\n"
 +
-+#: src/shar.c:2123
++#: src/shar.c:2078
 +msgid "This system doesn't support -Z ('compress'), use -z instead"
 +msgstr "Ten system nie obs³uguje -Z ('compress'), nale¿y u¿yæ -z"
 +
-+#: src/shar.c:2158
++#: src/shar.c:2113
 +#, c-format
 +msgid "Soft limit %s\n"
 +msgstr "Miêkkie ograniczenie %s\n"
 +
-+#: src/shar.c:2173
++#: src/shar.c:2128
 +#, c-format
 +msgid "illegal output prefix\n"
 +msgstr "niedozwolony prefiks wyj¶cia\n"
 +
-+#: src/shar.c:2220 src/unshar.c:415 src/uudecode.c:461 src/uuencode.c:250
++#: src/shar.c:2175 src/unshar.c:415 src/uudecode.c:461 src/uuencode.c:250
 +#, c-format, no-wrap
 +msgid ""
 +"Copyright (C) %s Free Software Foundation, Inc.\n"
@@ -562,44 +564,44 @@
 +"Autorzy nie daj± ¯ADNYCH gwarancji, w tym równie¿ gwarancji PRZYDATNO¦CI\n"
 +"DO SPRZEDA¯Y LUB DO KONKRETNYCH CELÓW.\n"
 +
-+#: src/shar.c:2267
++#: src/shar.c:2222
 +msgid "WARNING: No user interaction in vanilla mode"
 +msgstr "UWAGA: Tryb vanilla nie jest interakcyjny"
 +
-+#: src/shar.c:2279
++#: src/shar.c:2234
 +msgid "WARNING: Non-text storage options overridden"
 +msgstr "UWAGA: nadpisano opcje zachowywania nietekstowego"
 +
-+#: src/shar.c:2335
++#: src/shar.c:2290
 +msgid "No input files"
 +msgstr "Brak pliku wej¶ciowego"
 +
-+#: src/shar.c:2341
++#: src/shar.c:2296
 +msgid "Cannot use -a option without -n"
 +msgstr "Nie mo¿na u¿yæ opcji -a bez -n"
 +
-+#: src/shar.c:2347
++#: src/shar.c:2302
 +msgid "Cannot use -l or -L option without -o"
 +msgstr "Nie mo¿na u¿yæ opcji -l ani -L bez -o"
 +
-+#: src/shar.c:2359
++#: src/shar.c:2314
 +msgid "PLEASE avoid -X shars on Usenet or public networks"
 +msgstr "PROSZÊ unikaæ archiwów -X na Usenecie i w sieciach publicznych"
 +
-+#: src/shar.c:2400
++#: src/shar.c:2355
 +msgid "You have unpacked the last part"
 +msgstr "Rozpakowano ostatni± czê¶æ"
 +
-+#: src/shar.c:2402
++#: src/shar.c:2357
 +#, c-format
 +msgid "Created %d files\n"
 +msgstr "Utworzono %d plików\n"
 +
-+#: src/shar.c:2413
++#: src/shar.c:2368
 +msgid "removed"
 +msgstr "usuniêto"
 +
-+#: src/shar.c:2414
++#: src/shar.c:2369
 +msgid "failed to remove"
 +msgstr "nie usuniêto z powodu b³êdu"
 +
