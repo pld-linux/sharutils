@@ -1,0 +1,183 @@
+--- sharutils-4.6/doc/sharutils.texi.orig	2005-08-18 18:20:36.000000000 +0200
++++ sharutils-4.6/doc/sharutils.texi	2005-10-25 22:20:23.060177256 +0200
+@@ -2,18 +2,15 @@
+ @c %**start of header
+ @setfilename sharutils.info
+ @settitle GNU @code{shar} utilities
+-@dircategory Archiving
++@dircategory File utilities:
+ @direntry
+-* Shar utilities: (sharutils).  Shell archiver, uuencode/uudecode.
+-@end direntry
+-@dircategory Individual utilities
+-@direntry
+-* mail-files: (sharutils)mail-files invocation. Send files to remote site.
+-* mailshar: (sharutils)mailshar invocation.     Make and send a shell archive.
+-* shar: (sharutils)shar invocation.             Make a shell archive.
+-* unshar: (sharutils)unshar invocation.         Explode a shell archive.
+-* uudecode: (sharutils)uudecode invocation.     Restore file from 7-bits.
+-* uuencode: (sharutils)uuencode invocation.     Force binary file to 7-bits.
++* Shar utilities: (sharutils).		Shell archiver, uuencode/uudecode
++* mail-files: (sharutils)mail-files.	Send files to remote site
++* mailshar: (sharutils)mailshar.	Make and send a shell archive
++* shar: (sharutils)shar.		Make a shell archive
++* unshar: (sharutils)unshar.		Explode a shell archive
++* uudecode: (sharutils)uudecode.	Restore file from 7-bits
++* uuencode: (sharutils)uuencode.	Force binary file to 7-bits
+ @end direntry
+ 
+ @finalout
+@@ -80,8 +77,8 @@
+ 
+ The basic @code{shar} utilities
+ 
+-* shar invocation::             Invoking the @code{shar} program
+-* unshar invocation::           Invoking the @code{unshar} program
++* shar::                        Invoking the @code{shar} program
++* unshar::                      Invoking the @code{unshar} program
+ * Miscellaneous::               Miscellaneous considerations
+ 
+ Invoking the @code{shar} program
+@@ -95,8 +92,8 @@
+ 
+ Simple wrappers around @code{shar}
+ 
+-* Invoking mailshar::           The @code{mailshar} command and arguments
+-* Invoking mail-files::         The @code{mail-files} command and arguments
++* mailshar::                    The @code{mailshar} command and arguments
++* mail-files::                  The @code{mail-files} command and arguments
+ * Invoking find-mailer::        The @code{find-mailer} command and arguments
+ 
+ Remote synchronisation of directories
+@@ -174,21 +171,21 @@
+ in manufacturing shars and in specifying shar @emph{smartness}.  For
+ example, @code{shar} may compress files, uuencode binary files, split
+ long files and construct multi-part mailings, ensure correct unsharing
+-order, and provide simplistic checksums.  @xref{shar invocation}.
++order, and provide simplistic checksums.  @xref{shar}.
+ 
+ GNU @code{unshar} scans a set of mail messages looking for the start
+ of shell archives.  It will automatically strip off the mail headers
+ and other introductory text.  The archive bodies are then unpacked by
+ a copy of the shell.  @code{unshar} may also process files containing
+-concatenated shell archives.  @xref{unshar invocation}.
++concatenated shell archives.  @xref{unshar}.
+ 
+ @menu
+-* shar invocation::             Invoking the @code{shar} program
+-* unshar invocation::           Invoking the @code{unshar} program
++* shar::                        Invoking the @code{shar} program
++* unshar::                      Invoking the @code{unshar} program
+ * Miscellaneous::               Miscellaneous considerations
+ @end menu
+ 
+-@node shar invocation, unshar invocation, Basic, Basic
++@node shar, unshar, Basic, Basic
+ @section Invoking the @code{shar} program
+ @pindex shar
+ 
+@@ -236,7 +233,7 @@
+ * Kinds::                       Producing different kinds of shar
+ @end menu
+ 
+-@node Selecting, Splitting, shar invocation, shar invocation
++@node Selecting, Splitting, shar, shar
+ @subsection Selecting files
+ 
+ @table @code
+@@ -271,7 +268,7 @@
+ 
+ @end table
+ 
+-@node Splitting, Headers, Selecting, shar invocation
++@node Splitting, Headers, Selecting, shar
+ @subsection Splitting output
+ 
+ @table @code
+@@ -301,7 +298,7 @@
+ in the correct order.  If the recipient of the shell archives wants to
+ put all of them in a single folder, she shall save them in the correct
+ order for @code{unshar}, used with option @code{-e}, to unpack them
+-all at once.  @xref{unshar invocation}.
++all at once.  @xref{unshar}.
+ 
+ For people used to saving all the shell archives into a single mail
+ folder, care must be taken to save them in the appropriate order.
+@@ -312,7 +309,7 @@
+ 
+ @end table
+ 
+-@node Headers, Stocking, Splitting, shar invocation
++@node Headers, Stocking, Splitting, shar
+ @subsection Controlling the shar headers
+ 
+ @table @code
+@@ -366,7 +363,7 @@
+ 
+ @end table
+ 
+-@node Stocking, Transmission, Headers, shar invocation
++@node Stocking, Transmission, Headers, shar
+ @subsection Selecting how files are stocked
+ 
+ @table @code
+@@ -455,7 +452,7 @@
+ 
+ @end table
+ 
+-@node Transmission, Kinds, Stocking, shar invocation
++@node Transmission, Kinds, Stocking, shar
+ @subsection Protecting against transmission errors
+ 
+ Transmission of shell archives is not always free of errors.  So one
+@@ -500,7 +497,7 @@
+ 
+ @end table
+ 
+-@node Kinds,  , Transmission, shar invocation
++@node Kinds,  , Transmission, shar
+ @subsection Producing different kinds of shars
+ 
+ @table @code
+@@ -591,7 +588,7 @@
+ 
+ @end table
+ 
+-@node unshar invocation, Miscellaneous, shar invocation, Basic
++@node unshar, Miscellaneous, shar, Basic
+ @section Invoking the @code{unshar} program
+ @pindex unshar
+ 
+@@ -657,7 +654,7 @@
+ 
+ @end table
+ 
+-@node Miscellaneous,  , unshar invocation, Basic
++@node Miscellaneous,  , unshar, Basic
+ @section Miscellaneous considerations
+ 
+ Here is a place-holder for many considerations which do not fit
+@@ -703,18 +700,18 @@
+ @chapter Simple wrappers around @code{shar}
+ 
+ @menu
+-* Invoking mailshar::           The @code{mailshar} command and arguments
+-* Invoking mail-files::         The @code{mail-files} command and arguments
++* mailshar::                    The @code{mailshar} command and arguments
++* mail-files::                  The @code{mail-files} command and arguments
+ * Invoking find-mailer::        The @code{find-mailer} command and arguments
+ @end menu
+ 
+-@node Invoking mailshar, Invoking mail-files, Wrappers, Wrappers
++@node mailshar, mail-files, Wrappers, Wrappers
+ @section The @code{mailshar} command and arguments
+ 
+-@node Invoking mail-files, Invoking find-mailer, Invoking mailshar, Wrappers
++@node mail-files, Invoking find-mailer, mailshar, Wrappers
+ @section The @code{mail-files} command and arguments
+ 
+-@node Invoking find-mailer,  , Invoking mail-files, Wrappers
++@node Invoking find-mailer,  , mail-files, Wrappers
+ @section The @code{find-mailer} command and arguments
+ 
+ @node Remsync,  , Wrappers, Top
