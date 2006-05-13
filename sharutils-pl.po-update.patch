@@ -1,0 +1,20 @@
+--- sharutils-4.6.2/po/pl.po.orig	2006-03-25 19:02:22.000000000 +0100
++++ sharutils-4.6.2/po/pl.po	2006-05-13 03:31:38.295499750 +0200
+@@ -819,14 +819,14 @@
+ msgstr "nie pod±¿anie za dowi±zaniem symbolicznym (%s)"
+ 
+ #: src/uudecode.c:398
+-#, fuzzy, c-format
++#, c-format
+ msgid "freopen of %s"
+-msgstr "Otwieranie przez fopen %s"
++msgstr "freopen %s"
+ 
+ #: src/uudecode.c:404
+ #, c-format
+ msgid "chmod of %s"
+-msgstr ""
++msgstr "chmod %s"
+ 
+ #: src/uudecode.c:436
+ #, c-format
