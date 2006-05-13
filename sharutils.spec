@@ -9,7 +9,7 @@ Summary(tr):	Arşivleme ve kabuk araçları
 Summary(uk):	õÔÉÌ¦ÔÉ GNU shar ÄÌÑ ÓÔ×ÏÒÅÎÎÑ ÔÁ ÒÏÚĞÁËÏ×ËÉ shell-ÁÒÈ¦×¦×
 Name:		sharutils
 Version:	4.6.2
-Release:	0
+Release:	1
 License:	GPL
 Group:		Applications
 Source0:	ftp://ftp.gnu.org/gnu/sharutils/REL-%{version}/%{name}-%{version}.tar.bz2
@@ -18,6 +18,7 @@ Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-ma
 # Source1-md5:	336f405f69324d129a6ccd3b66f8eb6c
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-sh.patch
+Patch2:		%{name}-pl.po-update.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
@@ -90,6 +91,9 @@ programlar üzerinden güvenli bir şekilde gönderilebilir.
 %setup -q -a1
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
+
+rm -f po/stamp-po
 
 %build
 %{__gettextize}
@@ -98,7 +102,7 @@ programlar üzerinden güvenli bir şekilde gönderilebilir.
 %{__automake}
 %configure
 
-%{__make} all
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
