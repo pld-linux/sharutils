@@ -8,20 +8,19 @@ Summary(ru):	õÔÉÌÉÔÙ GNU shar ÄÌÑ ÓÏÚÄÁÎÉÑ É ÒÁÓÐÁËÏ×ËÉ shell-ÁÒÈÉ×Ï×
 Summary(tr):	Arþivleme ve kabuk araçlarý
 Summary(uk):	õÔÉÌ¦ÔÉ GNU shar ÄÌÑ ÓÔ×ÏÒÅÎÎÑ ÔÁ ÒÏÚÐÁËÏ×ËÉ shell-ÁÒÈ¦×¦×
 Name:		sharutils
-Version:	4.6.2
+Version:	4.6.3
 Release:	1
 License:	GPL
 Group:		Applications
 Source0:	ftp://ftp.gnu.org/gnu/sharutils/REL-%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	8714665f1499efd06330fd69164ca80d
+# Source0-md5:	ec4c932d0704efe288d82219b089a3dc
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source1-md5:	336f405f69324d129a6ccd3b66f8eb6c
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-sh.patch
-Patch2:		%{name}-pl.po-update.patch
-BuildRequires:	autoconf
-BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	autoconf >= 2.50
+BuildRequires:	automake >= 1:1.9
+BuildRequires:	gettext-devel >= 0.14.5
 BuildRequires:	texinfo
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -91,9 +90,6 @@ programlar üzerinden güvenli bir þekilde gönderilebilir.
 %setup -q -a1
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
-
-rm -f po/stamp-po
 
 %build
 %{__gettextize}
