@@ -1,12 +1,12 @@
 Summary:	GNU shar utils - shar, unshar, uuencode, uudecode
-Summary(de):	GNU-shar-Dienstprogramme - shar, unshar, uuencode, uudecode
-Summary(es):	Utilitarios shar de la GNU - shar, unshar, uuencode, uudecode
-Summary(fr):	Utilitaires shar de GNU - shar, unshar, uuencode, uudecode
-Summary(pl):	NarzЙdzia z GNU shar - shar, unshar, uuencode, uudecode
-Summary(pt_BR):	UtilitАrios shar da GNU - shar, unshar, uuencode, uudecode
-Summary(ru):	Утилиты GNU shar для создания и распаковки shell-архивов
-Summary(tr):	ArЧivleme ve kabuk araГlarЩ
-Summary(uk):	Утил╕ти GNU shar для створення та розпаковки shell-арх╕в╕в
+Summary(de.UTF-8):   GNU-shar-Dienstprogramme - shar, unshar, uuencode, uudecode
+Summary(es.UTF-8):   Utilitarios shar de la GNU - shar, unshar, uuencode, uudecode
+Summary(fr.UTF-8):   Utilitaires shar de GNU - shar, unshar, uuencode, uudecode
+Summary(pl.UTF-8):   Narzд≥dzia z GNU shar - shar, unshar, uuencode, uudecode
+Summary(pt_BR.UTF-8):   Utilitц║rios shar da GNU - shar, unshar, uuencode, uudecode
+Summary(ru.UTF-8):   пёя┌п╦п╩п╦я┌я▀ GNU shar п╢п╩я▐ я│п╬п╥п╢п╟п╫п╦я▐ п╦ я─п╟я│п©п╟п╨п╬п╡п╨п╦ shell-п╟я─я┘п╦п╡п╬п╡
+Summary(tr.UTF-8):   Arе÷ivleme ve kabuk araц╖larд╠
+Summary(uk.UTF-8):   пёя┌п╦п╩я√я┌п╦ GNU shar п╢п╩я▐ я│я┌п╡п╬я─п╣п╫п╫я▐ я┌п╟ я─п╬п╥п©п╟п╨п╬п╡п╨п╦ shell-п╟я─я┘я√п╡я√п╡
 Name:		sharutils
 Version:	4.6.3
 Release:	1
@@ -37,54 +37,54 @@ scans mail messages looking for shar files. Unshar automatically
 strips off mail headers and introductory text and then unpacks the
 shar files.
 
-%description -l de
-Sie kЖnnen die shar-Dienstprogramme zum VerschlЭsseln und Packen einer
-Reihe von Dateien (binДr oder Text) in ein einfaches Textformat
+%description -l de.UTF-8
+Sie kц╤nnen die shar-Dienstprogramme zum Verschlц╪sseln und Packen einer
+Reihe von Dateien (binц╓r oder Text) in ein einfaches Textformat
 verwenden Dieses Format kann sicher per E-Mail oder andere Verfahren
-gesendet werden, bei denen das Senden von BinДrdateien schwierig ist.
+gesendet werden, bei denen das Senden von Binц╓rdateien schwierig ist.
 
-%description -l es
+%description -l es.UTF-8
 Los utilitarios shar pueden ser usados para codificar y empaquetar
 varios archivos, binarios y/o texto, en un formato especial de texto
-plano. Este formato puede ser seguramente mandado a travИs de mail o
-otros medios donde mandar archivos binarios sea difМcil.
+plano. Este formato puede ser seguramente mandado a travц╘s de mail o
+otros medios donde mandar archivos binarios sea difц╜cil.
 
-%description -l fr
-Les utilitaires shar servent Ю encoder et empaqueter un certain nombre
-de fichiers, binaires et/ou texte, sous un format texte spИcial. Ce
-format peut Йtre envoyИ sans problХme par courrier ou par d'autres
-moyens oЫ l'envoi de fichiers binaires est difficile.
+%description -l fr.UTF-8
+Les utilitaires shar servent ц═ encoder et empaqueter un certain nombre
+de fichiers, binaires et/ou texte, sous un format texte spц╘cial. Ce
+format peut ц╙tre envoyц╘ sans problц╗me par courrier ou par d'autres
+moyens oц╧ l'envoi de fichiers binaires est difficile.
 
-%description -l pl
-NarzЙdzia shar sЁu©╠ do przeksztaЁcania i dystrybucji wielu plikСw
+%description -l pl.UTF-8
+Narzд≥dzia shar sе┌uе╪д┘ do przeksztaе┌cania i dystrybucji wielu plikцЁw
 binarnych i/lub tekstowych w jednym, tekstowym archiwum. Archiwum
-mo©na nastЙpnie wysyЁaФ poczt╠ elektroniczn╠ albo innymi metodami,
-ktСre uniemo©liwiaj╠ lub znacznie utrudniaj╠ transmisjЙ plikСw
+moе╪na nastд≥pnie wysyе┌aд┤ pocztд┘ elektronicznд┘ albo innymi metodami,
+ktцЁre uniemoе╪liwiajд┘ lub znacznie utrudniajд┘ transmisjд≥ plikцЁw
 binarnych.
 
-%description -l pt_BR
-Os utilitАrios shar podem ser usados para codificar e empacotar vАrios
-arquivos, binАrios e/ou texto, em um formato especial de texto plano.
-Este formato pode ser seguramente mandado atravИs de mail ou outros
-meios onde mandar arquivos binАrios И difМcil.
+%description -l pt_BR.UTF-8
+Os utilitц║rios shar podem ser usados para codificar e empacotar vц║rios
+arquivos, binц║rios e/ou texto, em um formato especial de texto plano.
+Este formato pode ser seguramente mandado atravц╘s de mail ou outros
+meios onde mandar arquivos binц║rios ц╘ difц╜cil.
 
-%description -l ru
-Утилиты shar могут быть использованы для кодирования и упаковки
-нескольких файлов, бинарных и/или текстовых, в специальный файл чисто
-текстового формата. Этот файл может быть послан e-mail'ом или другим
-способом, где посылка бинарных файлов затруднена.
+%description -l ru.UTF-8
+пёя┌п╦п╩п╦я┌я▀ shar п╪п╬пЁя┐я┌ п╠я▀я┌я▄ п╦я│п©п╬п╩я▄п╥п╬п╡п╟п╫я▀ п╢п╩я▐ п╨п╬п╢п╦я─п╬п╡п╟п╫п╦я▐ п╦ я┐п©п╟п╨п╬п╡п╨п╦
+п╫п╣я│п╨п╬п╩я▄п╨п╦я┘ я└п╟п╧п╩п╬п╡, п╠п╦п╫п╟я─п╫я▀я┘ п╦/п╦п╩п╦ я┌п╣п╨я│я┌п╬п╡я▀я┘, п╡ я│п©п╣я├п╦п╟п╩я▄п╫я▀п╧ я└п╟п╧п╩ я┤п╦я│я┌п╬
+я┌п╣п╨я│я┌п╬п╡п╬пЁп╬ я└п╬я─п╪п╟я┌п╟. п╜я┌п╬я┌ я└п╟п╧п╩ п╪п╬п╤п╣я┌ п╠я▀я┌я▄ п©п╬я│п╩п╟п╫ e-mail'п╬п╪ п╦п╩п╦ п╢я─я┐пЁп╦п╪
+я│п©п╬я│п╬п╠п╬п╪, пЁп╢п╣ п©п╬я│я▀п╩п╨п╟ п╠п╦п╫п╟я─п╫я▀я┘ я└п╟п╧п╩п╬п╡ п╥п╟я┌я─я┐п╢п╫п╣п╫п╟.
 
-%description -l tr
-shar araГlarЩ, derlemiЧ ya da metin biГimindeki dosyalarЩ dЭz metin
-biГiminde kodlamak iГin kullanЩlabilir. Bu biГimdeki dosya, posta ile
-ya da derlenmiЧ dosyalarЩn gЖnderilmesinin sorun ГЩkardЩПЩ diПer
-programlar Эzerinden gЭvenli bir Чekilde gЖnderilebilir.
+%description -l tr.UTF-8
+shar araц╖larд╠, derlemiе÷ ya da metin biц╖imindeki dosyalarд╠ dц╪z metin
+biц╖iminde kodlamak iц╖in kullanд╠labilir. Bu biц╖imdeki dosya, posta ile
+ya da derlenmiе÷ dosyalarд╠n gц╤nderilmesinin sorun ц╖д╠kardд╠д÷д╠ diд÷er
+programlar ц╪zerinden gц╪venli bir е÷ekilde gц╤nderilebilir.
 
-%description -l uk
-Утил╕ти shar можуть бути використан╕ для кодування та упаковки к╕лькох
-файл╕в, дв╕йкових та/або текстових, в спец╕альний файл чисто
-текстового формату. Цей файл можна надсилати електронною поштою чи
-╕ншим способом, при якому посилка дв╕йкових файл╕в не п╕дтриму╓ться.
+%description -l uk.UTF-8
+пёя┌п╦п╩я√я┌п╦ shar п╪п╬п╤я┐я┌я▄ п╠я┐я┌п╦ п╡п╦п╨п╬я─п╦я│я┌п╟п╫я√ п╢п╩я▐ п╨п╬п╢я┐п╡п╟п╫п╫я▐ я┌п╟ я┐п©п╟п╨п╬п╡п╨п╦ п╨я√п╩я▄п╨п╬я┘
+я└п╟п╧п╩я√п╡, п╢п╡я√п╧п╨п╬п╡п╦я┘ я┌п╟/п╟п╠п╬ я┌п╣п╨я│я┌п╬п╡п╦я┘, п╡ я│п©п╣я├я√п╟п╩я▄п╫п╦п╧ я└п╟п╧п╩ я┤п╦я│я┌п╬
+я┌п╣п╨я│я┌п╬п╡п╬пЁп╬ я└п╬я─п╪п╟я┌я┐. п╕п╣п╧ я└п╟п╧п╩ п╪п╬п╤п╫п╟ п╫п╟п╢я│п╦п╩п╟я┌п╦ п╣п╩п╣п╨я┌я─п╬п╫п╫п╬я▌ п©п╬я┬я┌п╬я▌ я┤п╦
+я√п╫я┬п╦п╪ я│п©п╬я│п╬п╠п╬п╪, п©я─п╦ я▐п╨п╬п╪я┐ п©п╬я│п╦п╩п╨п╟ п╢п╡я√п╧п╨п╬п╡п╦я┘ я└п╟п╧п╩я√п╡ п╫п╣ п©я√п╢я┌я─п╦п╪я┐я■я┌я▄я│я▐.
 
 %prep
 %setup -q -a1
