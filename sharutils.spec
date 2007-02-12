@@ -1,12 +1,12 @@
 Summary:	GNU shar utils - shar, unshar, uuencode, uudecode
-Summary(de.UTF-8):   GNU-shar-Dienstprogramme - shar, unshar, uuencode, uudecode
-Summary(es.UTF-8):   Utilitarios shar de la GNU - shar, unshar, uuencode, uudecode
-Summary(fr.UTF-8):   Utilitaires shar de GNU - shar, unshar, uuencode, uudecode
-Summary(pl.UTF-8):   Narzędzia z GNU shar - shar, unshar, uuencode, uudecode
-Summary(pt_BR.UTF-8):   Utilitários shar da GNU - shar, unshar, uuencode, uudecode
-Summary(ru.UTF-8):   Утилиты GNU shar для создания и распаковки shell-архивов
-Summary(tr.UTF-8):   Arşivleme ve kabuk araçları
-Summary(uk.UTF-8):   Утиліти GNU shar для створення та розпаковки shell-архівів
+Summary(de.UTF-8):	GNU-shar-Dienstprogramme - shar, unshar, uuencode, uudecode
+Summary(es.UTF-8):	Utilitarios shar de la GNU - shar, unshar, uuencode, uudecode
+Summary(fr.UTF-8):	Utilitaires shar de GNU - shar, unshar, uuencode, uudecode
+Summary(pl.UTF-8):	Narzędzia z GNU shar - shar, unshar, uuencode, uudecode
+Summary(pt_BR.UTF-8):	Utilitários shar da GNU - shar, unshar, uuencode, uudecode
+Summary(ru.UTF-8):	Утилиты GNU shar для создания и распаковки shell-архивов
+Summary(tr.UTF-8):	Arşivleme ve kabuk araçları
+Summary(uk.UTF-8):	Утиліти GNU shar для створення та розпаковки shell-архівів
 Name:		sharutils
 Version:	4.6.3
 Release:	1
