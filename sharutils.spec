@@ -8,17 +8,16 @@ Summary(ru.UTF-8):	Утилиты GNU shar для создания и распа
 Summary(tr.UTF-8):	Arşivleme ve kabuk araçları
 Summary(uk.UTF-8):	Утиліти GNU shar для створення та розпаковки shell-архівів
 Name:		sharutils
-Version:	4.7
+Version:	4.9
 Release:	1
 License:	GPL v3+
 Group:		Applications
-Source0:	http://ftp.gnu.org/gnu/sharutils/REL-%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	729c070d814d9c688489d88dd7fd3efb
+Source0:	http://ftp.gnu.org/gnu/sharutils/%{name}-%{version}.tar.bz2
+# Source0-md5:	dd5e006504851563e3ca27640d9e7abd
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source1-md5:	336f405f69324d129a6ccd3b66f8eb6c
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-sh.patch
-Patch2:		%{name}-gettext17.patch
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	gettext-devel >= 0.14.5
@@ -91,7 +90,6 @@ programlar üzerinden güvenli bir şekilde gönderilebilir.
 %setup -q -a1
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
 
 %build
 %{__gettextize}
