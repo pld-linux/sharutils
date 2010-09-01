@@ -8,19 +8,20 @@ Summary(ru.UTF-8):	Утилиты GNU shar для создания и распа
 Summary(tr.UTF-8):	Arşivleme ve kabuk araçları
 Summary(uk.UTF-8):	Утиліти GNU shar для створення та розпаковки shell-архівів
 Name:		sharutils
-Version:	4.9
+Version:	4.10
 Release:	1
 License:	GPL v3+
 Group:		Applications
 Source0:	http://ftp.gnu.org/gnu/sharutils/%{name}-%{version}.tar.bz2
-# Source0-md5:	dd5e006504851563e3ca27640d9e7abd
+# Source0-md5:	f918859228238d69e1ce78ccbec8f9e0
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source1-md5:	336f405f69324d129a6ccd3b66f8eb6c
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-sh.patch
+URL:		http://www.gnu.org/software/sharutils/
 BuildRequires:	autoconf >= 2.50
-BuildRequires:	automake >= 1:1.9
-BuildRequires:	gettext-devel >= 0.14.5
+BuildRequires:	automake >= 1:1.11
+BuildRequires:	gettext-devel >= 0.17
 BuildRequires:	texinfo
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -116,17 +117,27 @@ install man/pl/man5/* $RPM_BUILD_ROOT%{_mandir}/pl/man5
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post	-p	/sbin/postshell
+%post	-p /sbin/postshell
 -/usr/sbin/fix-info-dir -c %{_infodir}
 
-%postun	-p	/sbin/postshell
+%postun	-p /sbin/postshell
 -/usr/sbin/fix-info-dir -c %{_infodir}
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc ChangeLog NEWS README TODO AUTHORS
-%attr(755,root,root) %{_bindir}/*
-%{_infodir}/*info*
-%{_mandir}/man[15]/*
-%lang(ja) %{_mandir}/ja/man?/*
-%lang(pl) %{_mandir}/pl/man?/*
+%doc AUTHORS ChangeLog NEWS README THANKS TODO
+%attr(755,root,root) %{_bindir}/mail-files
+%attr(755,root,root) %{_bindir}/mailshar
+%attr(755,root,root) %{_bindir}/remsync
+%attr(755,root,root) %{_bindir}/shar
+%attr(755,root,root) %{_bindir}/unshar
+%attr(755,root,root) %{_bindir}/uudecode
+%attr(755,root,root) %{_bindir}/uuencode
+%{_infodir}/sharutils.info*
+%{_mandir}/man1/shar.1*
+%{_mandir}/man1/unshar.1*
+%{_mandir}/man1/uudecode.1*
+%{_mandir}/man1/uuencode.1*
+%{_mandir}/man5/uuencode.5*
+%lang(ja) %{_mandir}/ja/man[15]/*
+%lang(pl) %{_mandir}/pl/man[15]/*
