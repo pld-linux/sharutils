@@ -8,20 +8,19 @@ Summary(ru.UTF-8):	Утилиты GNU shar для создания и распа
 Summary(tr.UTF-8):	Arşivleme ve kabuk araçları
 Summary(uk.UTF-8):	Утиліти GNU shar для створення та розпаковки shell-архівів
 Name:		sharutils
-Version:	4.11
+Version:	4.11.1
 Release:	1
 License:	GPL v3+
 Group:		Applications
 Source0:	http://ftp.gnu.org/gnu/sharutils/%{name}-%{version}.tar.bz2
-# Source0-md5:	502a15ed46d8bf988bcee982d6926e11
+# Source0-md5:	52dd02b6f5e0a148ba871234ae29bba2
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source1-md5:	336f405f69324d129a6ccd3b66f8eb6c
 Patch0:		%{name}-info.patch
-Patch1:		%{name}-pl.po-update.patch
 URL:		http://www.gnu.org/software/sharutils/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.11
-BuildRequires:	gettext-devel >= 0.17
+BuildRequires:	gettext-devel >= 0.18.1
 BuildRequires:	texinfo
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -90,7 +89,6 @@ programlar üzerinden güvenli bir şekilde gönderilebilir.
 %prep
 %setup -q -a1
 %patch0 -p1
-%patch1 -p1
 
 %{__rm} po/stamp-po
 
@@ -114,8 +112,6 @@ install -d $RPM_BUILD_ROOT%{_mandir}/{pl/man5,ja/man{1,5}}
 install man/ja/man1/* $RPM_BUILD_ROOT%{_mandir}/ja/man1
 install man/ja/man5/* $RPM_BUILD_ROOT%{_mandir}/ja/man5
 install man/pl/man5/* $RPM_BUILD_ROOT%{_mandir}/pl/man5
-
-%{__rm} -r $RPM_BUILD_ROOT%{_includedir}/sharutils
 
 %find_lang %{name}
 
