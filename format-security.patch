@@ -1,0 +1,56 @@
+--- sharutils-4.11.1/src/unshar.c~	2011-01-15 02:39:02.000000000 +0100
++++ sharutils-4.11.1/src/unshar.c	2012-12-13 13:49:48.998719358 +0100
+@@ -453,7 +453,7 @@
+               strcpy (cp, arg);
+             }
+           if (file = fopen (name_buffer, "r"), !file)
+-            error (EXIT_FAILURE, errno, name_buffer);
++            error (EXIT_FAILURE, errno, "%s", name_buffer);
+           unarchive_shar_file (name_buffer, file);
+           fclose (file);
+         }
+@@ -511,13 +511,13 @@
+   {
+     int fd = mkstemp (pz_fname);
+     if (fd < 0)
+-      error (EXIT_FAILURE, errno, pz_fname);
++      error (EXIT_FAILURE, errno, "%s", pz_fname);
+ 
+     fp = fdopen (fd, "w+");
+   }
+ 
+   if (fp == NULL)
+-    error (EXIT_FAILURE, errno, pz_fname);
++    error (EXIT_FAILURE, errno, "%s", pz_fname);
+ 
+   {
+     char *buf = malloc (pg_sz);
+--- sharutils-4.11.1/src/shar.c~	2011-01-15 02:38:38.000000000 +0100
++++ sharutils-4.11.1/src/shar.c	2012-12-13 13:50:22.712051502 +0100
+@@ -513,7 +513,7 @@
+ 
+   if (stat (local_name, &struct_stat))
+     {
+-      error (0, errno, local_name);
++      error (0, errno, "%s", local_name);
+       return 1;
+     }
+ 
+@@ -522,7 +522,7 @@
+ 
+   if (directory = opendir (local_name), !directory)
+     {
+-      error (0, errno, local_name);
++      error (0, errno, "%s", local_name);
+       return 1;
+     }
+ 
+@@ -615,7 +615,7 @@
+ #else
+   if (closedir (directory))
+     {
+-      error (0, errno, local_name);
++      error (0, errno, "%s", local_name);
+       return 1;
+     }
+ #endif
