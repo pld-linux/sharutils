@@ -25,32 +25,50 @@
  
    {
      char *buf = malloc (pg_sz);
---- sharutils-4.11.1/src/shar.c~	2011-01-15 02:38:38.000000000 +0100
-+++ sharutils-4.11.1/src/shar.c	2012-12-13 13:50:22.712051502 +0100
-@@ -513,7 +513,7 @@
+--- sharutils-4.13.1/src/shar.c.orig	2013-01-02 19:33:45.538148598 +0100
++++ sharutils-4.13.1/src/shar.c	2013-01-02 19:54:54.374788820 +0100
+@@ -469,7 +469,7 @@
  
    if (stat (local_name, &struct_stat))
      {
 -      error (0, errno, local_name);
 +      error (0, errno, "%s", local_name);
-       return 1;
+       return SHAR_EXIT_FILE_NOT_FOUND;
      }
  
-@@ -522,7 +522,7 @@
+@@ -478,7 +478,7 @@
  
    if (directory = opendir (local_name), !directory)
      {
 -      error (0, errno, local_name);
 +      error (0, errno, "%s", local_name);
-       return 1;
+       return SHAR_EXIT_CANNOT_OPENDIR;
      }
  
-@@ -615,7 +615,7 @@
+@@ -571,7 +571,7 @@
  #else
    if (closedir (directory))
      {
 -      error (0, errno, local_name);
 +      error (0, errno, "%s", local_name);
-       return 1;
+       return SHAR_EXIT_CANNOT_OPENDIR;
      }
  #endif
+@@ -623,7 +623,7 @@
+ 
+     if (status != 0)
+       {
+-        error (0, errno, local_name_copy);
++        error (0, errno, "%s", local_name_copy);
+         status = SHAR_EXIT_FILE_NOT_FOUND;
+       }
+     else
+@@ -2189,7 +2189,7 @@
+               optionLoadLine (&sharOptions, arg);
+             }
+           else
+-            error (0, errno, arg);
++            error (0, errno, "%s", arg);
+           continue;
+         }
+ 
