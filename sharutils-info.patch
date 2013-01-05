@@ -1,6 +1,6 @@
---- sharutils-4.13.1/doc/sharutils.texi.orig	2013-01-02 19:22:04.381496546 +0100
-+++ sharutils-4.13.1/doc/sharutils.texi	2013-01-02 19:26:47.921490636 +0100
-@@ -2,17 +2,13 @@
+--- sharutils-4.13.2/doc/sharutils.texi.orig	2012-12-31 18:43:20.000000000 +0100
++++ sharutils-4.13.2/doc/sharutils.texi	2013-01-05 15:42:59.099701332 +0100
+@@ -2,16 +2,13 @@
  @c %**start of header
  @setfilename sharutils.info
  @settitle GNU @code{shar} utilities
@@ -15,7 +15,6 @@
 -* unshar: (sharutils)unshar Invocation.         Explode a shell archive.
 -* uudecode: (sharutils)uudecode Invocation.     Restore file from 7-bits.
 -* uuencode: (sharutils)uuencode Invocation.     Force binary file to 7-bits.
--* doc-license: GNU Free Documentation License.  Documentation license.
 +* Shar utilities: (sharutils).		Shell archiver, uuencode/uudecode
 +* shar: (sharutils)shar.		Make a shell archive
 +* unshar: (sharutils)unshar.		Explode a shell archive
@@ -24,7 +23,7 @@
  @end direntry
  
  @finalout
-@@ -78,10 +74,10 @@
+@@ -77,10 +74,10 @@
  
  The basic @code{shar} utilities
  
@@ -39,7 +38,7 @@
  
  @end detailmenu
  @end menu
-@@ -122,19 +118,19 @@
+@@ -121,19 +118,19 @@
  in manufacturing shars and in specifying shar @emph{smartness}.  For
  example, @code{shar} may compress files, uuencode binary files, split
  long files and construct multi-part mailings, ensure correct unsharing
@@ -65,20 +64,20 @@
  @end menu
  
  @include invoke-shar.texi
---- sharutils-4.13.1/doc/invoke-shar.texi.orig	2012-12-28 02:11:25.000000000 +0100
-+++ sharutils-4.13.1/doc/invoke-shar.texi	2013-01-02 19:29:13.984820926 +0100
+--- sharutils-4.13.2/doc/invoke-shar.texi.orig	2013-01-05 07:37:46.000000000 +0100
++++ sharutils-4.13.2/doc/invoke-shar.texi	2013-01-05 15:44:47.639699068 +0100
 @@ -1,4 +1,4 @@
 -@node shar Invocation
 +@node shar
  @section Invoking shar
  @pindex shar
  @cindex create a shell archive
-@@ -471,7 +471,7 @@
- order.  If the recipient of the shell archives wants to put all of
- them in a single email folder (file), they will have to be saved in
- the correct order for @command{unshar} to unpack them all at once (using
--one of the split archive options).  @xref{unshar Invocation}.
-+one of the split archive options).  @xref{unshar}.
+@@ -489,7 +489,7 @@
+ all of them in a single email folder (file), they will have to be
+ saved in the correct order for @command{unshar} to unpack them all at
+ once (using one of the split archive options).
+-@xref{unshar Invocation}.
++@xref{unshar}.
  @subsubheading input-file-list option (-I).
  @anchor{shar input-file-list}
  @cindex shar-input-file-list
@@ -106,3 +105,14 @@
  @section Invoking uuencode
  @pindex uuencode
  @cindex encode a file into email friendly text
+--- sharutils-4.13.2/src/shar-opts.def.orig	2013-01-03 22:46:34.000000000 +0100
++++ sharutils-4.13.2/src/shar-opts.def	2013-01-05 15:44:28.246366137 +0100
+@@ -360,7 +360,7 @@
+ 	all of them in a single email folder (file), they will have to be
+ 	saved in the correct order for @command{unshar} to unpack them all at
+ 	once (using one of the split archive options).
+-	@xref{unshar Invocation}.
++	@xref{unshar}.
+ 	_EODoc_;
+ };
+ 
