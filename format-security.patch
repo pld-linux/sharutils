@@ -63,6 +63,33 @@
          status = SHAR_EXIT_FILE_NOT_FOUND;
        }
      else
+@@ -946,7 +946,7 @@
+         free (current_directory);
+       }
+     else
+-      error (0, errno, _("Cannot get current directory name"));
++      error (0, errno, "%s", _("Cannot get current directory name"));
+   }
+ 
+   {
+@@ -1974,7 +1974,7 @@
+        */
+       FILE * fp = freopen ("/dev/null", fwriteonly_mode, stderr);
+       if (fp != stderr)
+-        error (SHAR_EXIT_FAILED, errno,
++        error (SHAR_EXIT_FAILED, errno, "%s",
+                _("reopening stderr to /dev/null"));
+     }
+ 
+@@ -2040,7 +2040,7 @@
+   if (HAVE_OPT(QUERY_USER))
+     {
+       if (HAVE_OPT(NET_HEADERS))
+-	error (0, 0, _("PLEASE avoid -X shars on Usenet or public networks"));
++	error (0, 0, "%s", _("PLEASE avoid -X shars on Usenet or public networks"));
+ 
+       fputs ("shar_wish=\n", output);
+     }
 @@ -2189,7 +2189,7 @@
                optionLoadLine (&sharOptions, arg);
              }
@@ -72,3 +99,78 @@
            continue;
          }
  
+--- sharutils-4.13.2/src/uuencode.c.orig	2013-01-05 07:00:08.000000000 +0100
++++ sharutils-4.13.2/src/uuencode.c	2013-01-05 19:47:25.470199849 +0100
+@@ -118,7 +118,7 @@
+ try_putchar (int c)
+ {
+   if (putchar (c) == EOF)
+-    error (EXIT_FAILURE, 0, _("Write error"));
++    error (EXIT_FAILURE, 0, "%s", _("Write error"));
+ }
+ 
+ /*------------------------------------------------.
+@@ -181,7 +181,7 @@
+           if (feof (stdin))
+             finishing = 1;
+           else
+-            error (EXIT_FAILURE, 0, _("Read error"));
++            error (EXIT_FAILURE, 0, "%s", _("Read error"));
+         }
+ 
+       if (! HAVE_OPT(BASE64))
+@@ -189,13 +189,13 @@
+ 
+       n = encode_block (buf_out, buf, n);
+       if (fwrite (buf_out, 1, n, stdout) != n)
+-        error (EXIT_FAILURE, errno, _("Write error"));
++        error (EXIT_FAILURE, errno, "%s", _("Write error"));
+     }
+ 
+   if (ferror (stdin))
+-    error (EXIT_FAILURE, 0, _("Read error"));
++    error (EXIT_FAILURE, 0, "%s", _("Read error"));
+   if (fclose (stdin) != 0)
+-    error (EXIT_FAILURE, errno, _("Read error"));
++    error (EXIT_FAILURE, errno, "%s", _("Read error"));
+ 
+   if (! HAVE_OPT(BASE64))
+     {
+@@ -223,9 +223,9 @@
+ 
+ 	FILE * fp = freopen (*argv, FOPEN_READ_BINARY, stdin);
+ 	if (fp != stdin)
+-	  error (EXIT_FAILURE, errno, _("fopen-ing %s"), *argv);
++	  error (EXIT_FAILURE, errno, "%s", _("fopen-ing %s"), *argv);
+ 	if (fstat (fileno (stdin), &sb) != 0)
+-	  error (EXIT_FAILURE, errno, _("fstat-ing %s"), *argv);
++	  error (EXIT_FAILURE, errno, "%s", _("fstat-ing %s"), *argv);
+ 	*mode = sb.st_mode & (S_IRWXU | S_IRWXG | S_IRWXO);
+         output_name = argv[1];
+ 	break;
+@@ -251,7 +251,7 @@
+       size_t nmlen = strlen (output_name);
+       char * p = malloc (nmlen + (nmlen > 1) + 3);
+       if (p == NULL)
+-        error (EXIT_FAILURE, ENOMEM, _("Allocation failure"));
++        error (EXIT_FAILURE, ENOMEM, "%s", _("Allocation failure"));
+       nmlen = encode_block (p, (unsigned char *)output_name, nmlen);
+       if (HAVE_OPT(BASE64))
+         {
+@@ -281,14 +281,14 @@
+               HAVE_OPT(BASE64) ? "-base64" : "",
+               HAVE_OPT(ENCODE_FILE_NAME) ? "-encoded" : "",
+ 	      mode, output_name) < 0)
+-    error (EXIT_FAILURE, errno, _("Write error"));
++    error (EXIT_FAILURE, errno, "%s", _("Write error"));
+ 
+   encode ();
+ 
+   if (ferror (stdout) ||
+       puts (HAVE_OPT(BASE64) ? "====" : "end") == EOF ||
+       fclose (stdout) != 0)
+-    error (EXIT_FAILURE, errno, _("Write error"));
++    error (EXIT_FAILURE, errno, "%s", _("Write error"));
+ 
+   exit (EXIT_SUCCESS);
+ }
