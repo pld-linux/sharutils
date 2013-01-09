@@ -8,12 +8,12 @@ Summary(ru.UTF-8):	Утилиты GNU shar для создания и распа
 Summary(tr.UTF-8):	Arşivleme ve kabuk araçları
 Summary(uk.UTF-8):	Утиліти GNU shar для створення та розпаковки shell-архівів
 Name:		sharutils
-Version:	4.13.2
+Version:	4.13.3
 Release:	1
 License:	GPL v3+
-Group:		Applications
-Source0:	http://ftp.gnu.org/gnu/sharutils/%{name}-%{version}.tar.bz2
-# Source0-md5:	37ebe9639ccf8bba25bb5e302830b29b
+Group:		Applications/File
+Source0:	http://ftp.gnu.org/gnu/sharutils/%{name}-%{version}.tar.xz
+# Source0-md5:	ac996dbe2dfc74647b500506af56779b
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source1-md5:	336f405f69324d129a6ccd3b66f8eb6c
 Patch0:		%{name}-info.patch
@@ -21,9 +21,11 @@ Patch1:		format-security.patch
 Patch2:		%{name}-pl.po-update.patch
 URL:		http://www.gnu.org/software/sharutils/
 BuildRequires:	autoconf >= 2.50
-BuildRequires:	automake >= 1:1.12
+BuildRequires:	automake >= 1:1.13
 BuildRequires:	gettext-devel >= 0.18.1
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	texinfo
+BuildRequires:	xz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
