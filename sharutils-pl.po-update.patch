@@ -1,492 +1,60 @@
---- sharutils-4.13.3/po/pl.po.orig	2013-01-09 17:20:52.969042184 +0100
-+++ sharutils-4.13.3/po/pl.po	2013-01-09 17:21:12.765708438 +0100
-@@ -1,15 +1,15 @@
- # Polish translation for sharutils.
--# Copyright (C) 2005, 2006, 2010, 2011, 2012 Free Software Foundation, Inc.
-+# Copyright (C) 2005, 2006, 2010, 2011, 2012, 2013 Free Software Foundation, Inc.
- # This file is distributed under the same license as the sharutils package.
- # Jakub Bogusz <qboosh@pld-linux.org>, 2005-2013.
- # partially based on initial translation by Wojtek Ślusarczyk of PLD, 1999.
- #
- msgid ""
- msgstr ""
--"Project-Id-Version: sharutils 4.13.2\n"
-+"Project-Id-Version: sharutils 4.13.3\n"
- "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
- "POT-Creation-Date: 2013-01-06 18:22-0800\n"
--"PO-Revision-Date: 2013-01-05 13:13+0100\n"
-+"PO-Revision-Date: 2013-01-09 16:40+0100\n"
- "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
- "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
- "Language: pl\n"
-@@ -272,9 +272,8 @@
- msgstr "Brak pamięci do powielenia przetłumaczonych napisów\n"
- 
- #: src/shar-opts.c:2051
--#, fuzzy
- msgid "create a shell archiv"
--msgstr "%s prawdopodobnie nie jest archiwum shellowym"
-+msgstr "tworzenie archiwum shellowego"
- 
- #: src/shar-opts.c:2053
- msgid ""
-@@ -403,18 +402,156 @@
+--- sharutils-4.13.4/po/pl.po.orig	2013-04-01 07:42:02.301972601 +0200
++++ sharutils-4.13.4/po/pl.po	2013-04-01 07:47:08.598632881 +0200
+@@ -395,7 +395,6 @@
  "\n"
- "please send bug reports to:  bug-gnu-utils@gnu.org"
- msgstr ""
-+"shar (GNU sharutils) - tworzenie archiwum shellowego - wersja 4.13.3\n"
-+"Składnia: shar [ -<flaga> [<wart>] | --<nazwa>[{=| }<wart>] ]... [plik ...]\n"
-+"\n"
-+"\n"
-+"Określanie kompresji:\n"
-+"\n"
-+"   -p, --intermix-type        określenie kompresji dla plików wejściowych\n"
-+"                                - nie pozwala na użycie opcji:\n"
-+"                                vanilla-operation\n"
-+"   -C, --compactor=łańcuch    określenie programu kompresującego\n"
-+"                                - nie pozwala na użycie opcji:\n"
-+"                                vanilla-operation\n"
-+"                                - może wystąpić wiele razy\n"
-+"   -g, --level-of-compression=ile przekazanie STOPNIA kompresji\n"
-+"                                - musi być w przedziale:\n"
-+"                                  od 1 do 9\n"
-+"       --level-for-gzip=ile   alias dla opcji 'level-of-compression'\n"
-+"\n"
-+"Określenie metody kodowania pliku:\n"
-+"\n"
-+"   -M, --mixed-uuencode       decyzja o uuencode osobno dla każdego pliku\n"
-+"   -B, --uuencode             potraktowanie wszystkich plików jako "
-+"binarnych\n"
-+"                                - alternatywa dla mixed-uuencode\n"
-+"   -T, --text-files           potraktowanie wszystkich plików jako "
-+"testkowych\n"
-+"                                - alternatywa dla mixed-uuencode\n"
-+"\n"
-+"Określanie wyboru plików i trybów wyjściowych:\n"
-+"\n"
-+"   -o, --output-prefix=prefix zapis wyjścia do pliku PREFIX.nn\n"
-+"   -l, --whole-size-limit=ile rozmiar podziału archiwum (nie plików)\n"
-+"                                - wymaga opcji:\n"
-+"                                output-prefix\n"
-+"                                - skalowany przyrostkiem: k/K/m/M/g/G/t/T\n"
-+"                                - musi należeć do jednego z przedziałów:\n"
-+"                                  od 8 do 1023 lub\n"
-+"                                  od 8192 do 4194304\n"
-+"   -L, --split-size-limit=ile  rozmiar podziału archiwum lub plików\n"
-+"                                - wymaga opcji:\n"
-+"                                output-prefix\n"
-+"                                - skalowany przyrostkiem: k/K/m/M/g/G/t/T\n"
-+"                                - musi należeć do jednego z przedziałów:\n"
-+"                                  od 8 do 1023 lub\n"
-+"                                  od 8192 do 4194304\n"
-+"                                - alternatywa dla opcji whole-size-limit\n"
-+"   -I, --input-file-list=plik  odczyt listy plików z PLIKU\n"
-+"\n"
-+"Sterowanie nagłówkami shara:\n"
-+"\n"
-+"   -n, --archive-name=nazwa   użycie nazwy dla archiwum\n"
-+"   -s, --submitter=łańcuch    napisanie nazwy/nazwiska wysyłającego\n"
-+"   -a, --net-headers          dodanie nagłówków Submitted-by: i Archive-"
-+"name:\n"
-+"                                - wymaga opcji:\n"
-+"                                archive-name\n"
-+"   -c, --cut-mark             rozpoczęcie archiwum linią cięcia\n"
-+"   -t, --translate            tłumaczenie komunikatów w skrypcie\n"
-+"\n"
-+"Ochrona przed problemami z transmisją:\n"
-+"\n"
-+"       --no-character-count   bez używania `wc -c' do sprawdzenia rozmiaru\n"
-+"   -D, --no-md5-digest        bez używania skrótu md5sum do weryfikacji\n"
-+"   -F, --force-prefix         dodanie znaku przedrostka w każdej linii\n"
-+"   -d, --here-delimiter=łańcuch  użycie ogranicznika dla plików\n"
-+"\n"
-+"Tworzenie różnych rodzajów archiwów shar:\n"
-+"\n"
-+"   -V, --vanilla-operation    tworzenie bardzo prostych sharów\n"
-+"   -P, --no-piping            używanie plików tymczasowych między "
-+"programami\n"
-+"   -x, --no-check-existing    nadpisywanie istniejących plików bez pytania\n"
-+"   -X, --query-user           pytanie użytkownika przed nadpisaniem plików\n"
-+"                                - nie pozwala na użycie opcji:\n"
-+"                                vanilla-operation\n"
-+"   -m, --no-timestamp         bez odtwarzania czasów modyfikacji plików\n"
-+"   -Q, --quiet-unshar         bez szczegółowych komunikatów przy "
-+"dekodowaniu\n"
-+"   -f, --basename             odtwarzanie w jednym katalogu pomimo "
-+"hierarchii\n"
-+"\n"
-+"Opcje umiędzynarodowienia:\n"
-+"\n"
-+"       --no-i18n              bez umiędzynarodowienia\n"
-+"       --print-text-domain-dir  wypisanie katalogu z komunikatami shara\n"
-+"\n"
-+"Komunikacja z użytkownikiem:\n"
-+"\n"
-+"   -q, --quiet                bez szczegółowych komunikatów\n"
-+"       --silent               alias dla opcji 'quiet'\n"
-+"\n"
-+"Opcje dotyczące wersji, składni i konfiguracji:\n"
-+"\n"
-+"   -v, --version[=arg]        wypisanie informacji o wersji i zakończenie\n"
-+"   -h, --help                 wyświetlenie szczegółowego opisu i "
-+"zakończenie\n"
-+"   -!, --more-help            szczegółowy opis przez program stronicujący\n"
-+"   -R, --save-opts[=plik]     zapis stanu opcji do pliku konfiguracyjnego\n"
-+"   -r, --load-opts=plik       odczyt opcji z pliku konfiguracyjnego\n"
-+"                                - wyłączane przez --no-load-opts\n"
-+"                                - może wystąpić wiele razy\n"
-+"\n"
-+"Opcje podaje się przez podwójny minus i nazwę lub pojedynczy minus\n"
-+"i znak flagi.\n"
-+"\n"
-+"Jeśli nie podano plików, lista plików wejściowych jest czytana ze "
-+"standardowego\n"
-+"wejścia. Standardowe wejście nie może być terminalem.\n"
-+"\n"
-+"Obsługiwane są następujące mechanizmy ustawiania opcji:\n"
-+" - odczyt pliku $HOME/.sharrc\n"
-+"\n"
-+"'shar' tworzy \"archiwa shellowe\" (pliki shar), które mają format tekstowy\n"
-+"i mogą być przesyłane pocztą elektroniczną. Pliki te mogą być rozpakowywane\n"
-+"przez uruchomienie ich przy użyciu '/bin/sh'. Wynikowe archiwum jest\n"
-+"wypisywane na standardowym wyjściu, chyba że podano opcję '-o'. Duży zestaw\n"
-+"opcji zapewnia dużą elastyczność przy tworzeniu sharów i określaniu\n"
-+"\"inteligencji\" shara. Archiwa mogą być dosyć proste ('--vanilla-"
-+"operation')\n"
-+"albo dającymi się przesyłać pocztą archiwami 'tar'.\n"
-+"\n"
-+"Opcje można podawać w dowolnej kolejności dopókie nie rozpoznany zostanie\n"
-+"argument będący plikiem. W przypadku opcji '--intermix-type' pomiędzy\n"
-+"argumentami plikowymi rozpoznawane jest więcej opcji dotyczących kompresji\n"
-+"i kodowania.\n"
-+"\n"
-+"Mimo że ten program obsługuje pliki kodowane uuencode, są one przestarzałe.\n"
-+"W przypadku przesyłania plików pocztą elektroniczną należy rozważyć "
-+"kodowanie\n"
-+"MIME. W przypadku wywołania uuencode, preferowaną metodą kodowania jest "
-+"base64.\n"
-+"\n"
-+"Raporty o błędach prosimy wysyłać na adres: bug-gnu-utils@gnu.org"
  
- #: src/shar-opts.c:2150
+ #: src/shar-opts.c:2291
+-#, fuzzy
  msgid ""
- "shar (GNU sharutils) - create a shell archive - Ver. 4.13.3\n"
- "USAGE:  shar [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [file ...]"
- msgstr ""
-+"shar (GNU sharutils) - tworzenie archiwum shellowego - wersja 4.13.3\n"
-+"Składnia: shar [ -<flaga> [<wart>] | --<nazwa>[{=| }<wart>] ]... [plik ...]"
- 
- #: src/shar-opts.c:2153
- msgid ""
- "If no 'file's are specified, the list of input files is read from a\n"
- "standard input.  Standard input must not be a terminal"
- msgstr ""
-+"Jeśli nie podano plików, lista plików wejściowych jest czytana ze "
-+"standardowego\n"
-+"wejścia. Standardowe wejście nie może być terminalem"
- 
- #: src/shar-opts.c:2156
- msgid ""
-@@ -435,6 +572,25 @@
+ "Though this program supports 'uuencode'-d files, they are deprecated.  If\n"
  "you are emailing files, please consider mime-encoded files.  If you do\n"
- "'uuencode', base 64 is the preferred encoding method"
- msgstr ""
-+"'shar' tworzy \"archiwa shellowe\" (pliki shar), które mają format tekstowy\n"
-+"i mogą być przesyłane pocztą elektroniczną. Pliki te mogą być rozpakowywane\n"
-+"przez uruchomienie ich przy użyciu '/bin/sh'. Wynikowe archiwum jest\n"
-+"wypisywane na standardowym wyjściu, chyba że podano opcję '-o'. Duży zestaw\n"
-+"opcji zapewnia dużą elastyczność przy tworzeniu sharów i określaniu\n"
-+"\"inteligencji\" shara. Archiwa mogą być dosyć proste ('--vanilla-"
-+"operation')\n"
-+"albo dającymi się przesyłać pocztą archiwami 'tar'.\n"
-+"\n"
-+"Opcje można podawać w dowolnej kolejności dopókie nie rozpoznany zostanie\n"
-+"argument będący plikiem. W przypadku opcji '--intermix-type' pomiędzy\n"
-+"argumentami plikowymi rozpoznawane jest więcej opcji dotyczących kompresji\n"
-+"i kodowania.\n"
-+"\n"
-+"Mimo że ten program obsługuje pliki kodowane uuencode, są one przestarzałe.\n"
-+"W przypadku przesyłania plików pocztą elektroniczną należy rozważyć "
-+"kodowanie\n"
-+"MIME. W przypadku wywołania uuencode, preferowaną metodą kodowania jest "
-+"base64."
+@@ -957,13 +956,13 @@
+ msgstr "%s: opcja '%s' musi mieć argument.\n"
  
- #: src/shar-opts.c:2171 src/unshar-opts.c:780 src/uudecode-opts.c:729
- #: src/uuencode-opts.c:717
-@@ -442,6 +598,8 @@
- "This program is released under the terms of the GNU General Public License, "
- "version 3 or later."
+ #: ../autoopts.c:171
+-#, fuzzy, c-format
++#, c-format
+ msgid ""
+ "(AutoOpts bug):  Equivalenced option '%s' was equivalenced to both\n"
+ "\t'%s' and '%s'."
  msgstr ""
-+"Ten program został wydany na warunkach Poszechnej Licencji Publicznej GNU, w "
-+"wersji 3 lub nowszej."
+ "(Błąd AutoOpts): Opcja równoważna '%s' odpowiada jednocześnie\n"
+-"\t'%s' i '%s'"
++"\t'%s' i '%s'."
  
- #: src/shar.c:373
+ #: ../check.c:94
  #, c-format
-@@ -608,21 +766,18 @@
- msgstr "Nie można zmienić katalogu na `%s'"
+@@ -1026,9 +1025,9 @@
+ msgstr "Błąd %s: '%s' nie jest rozpoznawanym formatem okresu czasu.\n"
  
- #: src/unshar-opts.c:491
--#, fuzzy
- msgid "unshar usage error:\n"
--msgstr "Błąd użycia shara:\n"
-+msgstr "Błąd użycia unshara:\n"
+ #: ../check.c:92
+-#, fuzzy, c-format
++#, c-format
+ msgid "%s error:  The %s option must appear %d times.\n"
+-msgstr "Błąd %s: opcja %s musi wystąpić %d razy\n"
++msgstr "Błąd %s: opcja %s musi wystąpić %d razy.\n"
  
- #: src/unshar-opts.c:527
--#, fuzzy
- msgid "unshar fatal error:\n"
--msgstr "Błąd krytyczny shara:\n"
-+msgstr "Błąd krytyczny unshara:\n"
- 
- #: src/unshar-opts.c:758
- msgid "unpack a shar archiv"
--msgstr ""
-+msgstr "rozpakowanie archiwum shara"
- 
- #: src/unshar-opts.c:760
--#, fuzzy
- msgid ""
- "Usage: ./unshar [OPTION]... [FILE]...\n"
- "Mandatory arguments to long options are mandatory for short options too.\n"
-@@ -638,6 +793,7 @@
- "If no FILE, standard input is read.\n"
- "Report bugs to <bug-gnu-utils@gnu.org>."
- msgstr ""
-+"Składnia: ./unshar [OPCJA]... [PLIK]...\n"
- "Argumenty obowiązkowe dla opcji długich obowiązują również dla opcji "
- "krótkich.\n"
- "\n"
-@@ -652,12 +808,15 @@
- "zakończenie\n"
- "\n"
- "Jeżeli nie podano PLIKU, dane zostaną pobrane ze standardowego wejścia.\n"
-+"Błędy prosimy zgłaszać na adres <bug-gnu-utils@gnu.org>."
- 
- #: src/unshar-opts.c:772
- msgid ""
- "./unshar: unrecognized option '--error-bogus-option-name'\n"
- "Try `./unshar --help' for more information."
- msgstr ""
-+"./unshar: nieznana opcja '--error-bogus-option-name'\n"
-+"`./unshar --help' poda więcej informacji."
- 
- #: src/unshar-opts.c:775
- msgid ""
-@@ -666,6 +825,11 @@
- "processed instead.  It then passes each archive discovered through an\n"
- "invocation of the shell program to unpack it"
- msgstr ""
-+"Unshar przeszukuje pliki wejściowe (zwykle wiadomości e-mail) w "
-+"poszukiwaniu\n"
-+"początków archiwów shellowych. Jeśli nie podano plików, przetwarzane jest\n"
-+"standardowe wejście. Następnie każde znalezione archiwum jest przekazywane\n"
-+"do powłoki w celu rozpakowania"
- 
- #: src/unshar.c:168
+ #: ../numeric.c:157
  #, c-format
-@@ -780,7 +944,7 @@
+@@ -1577,12 +1576,11 @@
+ msgstr "Jeśli nie podano plików, dekodowane jest standardowe wejście.\n"
  
- #: src/uudecode-opts.c:677
- msgid "decode an encoded fil"
--msgstr ""
-+msgstr "dekodowanie zakodowanych plików"
- 
- #: src/uudecode-opts.c:679
- msgid ""
-@@ -825,16 +989,63 @@
- "\n"
- "please send bug reports to:  bug-gnu-utils@gnu.org"
- msgstr ""
-+"uudecode (GNU sharutils) - dekodowanie zakodowanych plików - wersja 4.13.3\n"
-+"Składnia: uudecode [ -<flaga> [<wart>] | --<name>[{=| }<wart>] ]... "
-+"[plik ...]\n"
-+"\n"
-+"   -o, --output-file=plik     skierowanie wyjścia do pliku\n"
-+"   -c, --ignore-chmod         ignorowanie błędów fchmod(3P)\n"
-+"   -v, --version[=arg]        wypisanie informacji o wersji i zakończenie\n"
-+"   -h, --help                 wyświetlenie rozszerzonego opisu i "
-+"zakończenie\n"
-+"   -!, --more-help            szczegółowy opis przez program stronicujący\n"
-+"   -R, --save-opts[=plik]     zapis stanu opcji do pliku konfiguracyjnego\n"
-+"   -r, --load-opts=plik       odczyt opcji z pliku konfiguracyjnego\n"
-+"                                - wyłączane przez --no-load-opts\n"
-+"                                - może wystąpić wiele razy\n"
-+"\n"
-+"Opcje podaje się przez podwójny minus i nazwę lub pojedynczy minus\n"
-+"i znak flagi.\n"
-+"\n"
-+"Jeśli nie podano plików, dekodowane jest standardowe wejście.\n"
-+"\n"
-+"Obsługiwane są następujące mechanizmy ustawiania opcji:\n"
-+" - odczyt pliku $HOME/.sharrc\n"
-+"\n"
-+"'Uudecode' przekształca pliki zakodowane uuencode do postaci oryginalnej.\n"
-+"\n"
-+"Zakodowane pliki można podać z linii poleceń, albo jeden może być odczytany\n"
-+"ze standardowego wejścia. Nazwa pliku wyjściowego jest określona w pliku\n"
-+"zakodowanym, ale może być nadpisana przy użyciu opcji '-o'. Plik będzie "
-+"miał\n"
-+"uprawnienia pliku oryginalnego, ale bity setuid i wykonywania nie zostaną\n"
-+"zachowane. Jeśli plik wyjściowy zostanie podany jako '/dev/stdout' lub '-',\n"
-+"wynik będzie zapisany na standardowe wyjście. Jeśli jest wiele plików\n"
-+"wejściowych, a drugi lub kolejny plik określa standardowe wyjście, "
-+"zdekodowane\n"
-+"dane zostaną zapisane do tego samego pliku, co poprzedni. Nie należy tego\n"
-+"robić.\n"
-+"\n"
-+"'uudecode' ignoruje wszystkie początkowe i końcowe linie. Szuka linii\n"
-+"zaczynającej się od \"begin\" i przetwarza aż do napotkania znacznika "
-+"końca.\n"
-+"Na podstawie linii nagłówka program określa, który z dwóch obsługiwanych\n"
-+"schematów kodowania został użyty.\n"
-+"\n"
-+"Raporty o błędach prosimy wysyłać na adres: bug-gnu-utils@gnu.org"
- 
- #: src/uudecode-opts.c:710
- msgid ""
- "uudecode (GNU sharutils) - decode an encoded file - Ver. 4.13.3\n"
- "USAGE:  uudecode [ -<flag> [<val>] | --<name>[{=| }<val>] ]... [ file ... ]"
- msgstr ""
-+"uudecode (GNU sharutils) - dekodowanie zakodowanych plików - wersja 4.13.3\n"
-+"Składnia: uudecode [ -<flaga> [<wart>] | --<name>[{=| }<wart>] ]... "
-+"[plik ...]"
- 
- #: src/uudecode-opts.c:713
- msgid "If no 'file'(s) are provided, then standard input is decoded"
--msgstr ""
-+msgstr "Jeśli nie podano plików, dekodowane jest standardowe wejście"
- 
- #: src/uudecode-opts.c:715
- msgid ""
-@@ -856,6 +1067,25 @@
- "found.  The program determines from the header line of the encoded file\n"
- "which of the two supported encoding schemes was used"
- msgstr ""
-+"'Uudecode' przekształca pliki zakodowane uuencode do postaci oryginalnej.\n"
-+"\n"
-+"Zakodowane pliki można podać z linii poleceń, albo jeden może być odczytany\n"
-+"ze standardowego wejścia. Nazwa pliku wyjściowego jest określona w pliku\n"
-+"zakodowanym, ale może być nadpisana przy użyciu opcji '-o'. Plik będzie "
-+"miał\n"
-+"uprawnienia pliku oryginalnego, ale bity setuid i wykonywania nie zostaną\n"
-+"zachowane. Jeśli plik wyjściowy zostanie podany jako '/dev/stdout' lub '-',\n"
-+"wynik będzie zapisany na standardowe wyjście. Jeśli jest wiele plików\n"
-+"wejściowych, a drugi lub kolejny plik określa standardowe wyjście, "
-+"zdekodowane\n"
-+"dane zostaną zapisane do tego samego pliku, co poprzedni. Nie należy tego\n"
-+"robić.\n"
-+"\n"
-+"'uudecode' ignoruje wszystkie początkowe i końcowe linie. Szuka linii\n"
-+"zaczynającej się od \"begin\" i przetwarza aż do napotkania znacznika "
-+"końca.\n"
-+"Na podstawie linii nagłówka program określa, który z dwóch obsługiwanych\n"
-+"schematów kodowania został użyty."
- 
- #: src/uudecode.c:106 src/uudecode.c:456
- #, c-format
-@@ -926,18 +1156,16 @@
- "wejściowych.\n"
- 
- #: src/uuencode-opts.c:401
+ #: src/uudecode-opts.c:727
 -#, fuzzy
- msgid "uuencode usage error:\n"
--msgstr "Błąd użycia uudecode:\n"
-+msgstr "Błąd użycia uuencode:\n"
- 
- #: src/uuencode-opts.c:437
--#, fuzzy
- msgid "uuencode fatal error:\n"
--msgstr "Błąd krytyczny uudecode:\n"
-+msgstr "Błąd krytyczny uuencode:\n"
- 
- #: src/uuencode-opts.c:668
- msgid "encode a file into email friendly tex"
--msgstr ""
-+msgstr "zakodowanie pliku do tekstu przyjaznego dla e-maila"
- 
- #: src/uuencode-opts.c:670
  msgid ""
-@@ -979,6 +1207,48 @@
+ "'uudecode' transforms uuencoded files into their original form.\n"
  "\n"
- "please send bug reports to:  bug-gnu-utils@gnu.org"
  msgstr ""
-+"uuencode (GNU sharutils) - kodowanie pliku do tekstu przyjaznego dla e-maila "
-+"- wersja 4.13.3\n"
-+"Składnia: uuencode [ -<flaga> | --<nazwa> ]... [ plik_wejściowy ] "
-+"nazwa_wyjścia\n"
-+"\n"
-+"   -m, --base64               konwersja przy użyciu base64\n"
-+"   -e, --encode-file-name     zakodowanie nazwy pliku wyjściowego\n"
-+"   -v, --version[=arg]        wypisanie informacji o wersji i zakończenie\n"
-+"   -h, --help                 wyświetlenie szczegółowego opisu i "
-+"zakończenie\n"
-+"   -!, --more-help            szczegółowy opis przez program stronicujący\n"
-+"   -R, --save-opts[=plik]     zapis stanu opcji do pliku konfiguracyjnego\n"
-+"   -r, --load-opts=plik       odczyt opcji z pliku konfiguracyjnego\n"
-+"                                - wyłączane przez --no-load-opts\n"
-+"                                - może wystąpić wiele razy\n"
-+"\n"
-+"Opcje podaje się przez podwójny minus i nazwę lub pojedynczy minus\n"
-+"i znak flagi.\n"
-+"\n"
-+"Obsługiwane są następujące mechanizmy ustawiania opcji:\n"
-+" - odczyt pliku $HOME/.sharrc\n"
-+"\n"
-+"'uuencode' służy do tworzenia reprezentacji ASCII pliku, dzięki czemu może\n"
-+"być przesłany kanałami, które w innym przypadku uszkodziłyby dane.\n"
-+"W szczególności poczta elektroniczna nie obsługuje danych binarnych\n"
-+"i przeważnie dodaje znak w przypadku napotkania sekwencji 6-bajtowej\n"
-+"\"\\nFrom \".\n"
-+"\n"
-+"'uuencode' odczytuje plik_wejściowy (jeśli został podany; w przeciwnym\n"
-+"wypadku czyta ze standardowego wejścia) i wypisuje postać zakodowaną na\n"
-+"standardowym wyjściu. Wyjście zaczyna się od linii nagłówka, przeznaczonej\n"
-+"dla programu 'uudecode', podającej sugerowaną nazwę_wyjścia i uprawnienia.\n"
-+"Jeśli nazwa_wyjścia zostanie podana jako '/dev/stdout', 'uudecode' wypisze\n"
-+"zdekodowany plik na standardowe wyjście.\n"
-+"\n"
-+"Uwaga: 'uuencode' używa buforowania wejścia i zakłada, że wejście nie jest\n"
-+"tworzone ręcznie z terminala. Konsekwencją jest to, że w przypadku "
-+"terminala\n"
-+"może by konieczność wciśnięcia Ctrl-D kilka razy w celu zakończenia\n"
-+"wprowadzania.\n"
-+"\n"
-+"Raporty o błędach prosimy wysyłać na adres: bug-gnu-utils@gnu.org"
+-"'Uudecode' przekształca pliki zakodowane uuencode do postaci oryginalnej.\n"
++"'uudecode' przekształca pliki zakodowane uuencode do postaci oryginalnej.\n"
+ "\n"
  
- #: src/uuencode-opts.c:700
- msgid ""
-@@ -986,6 +1256,10 @@
- "4.13.3\n"
- "USAGE:  uuencode [ -<flag> | --<name> ]... [ in-file ] output-name"
- msgstr ""
-+"uuencode (GNU sharutils) - kodowanie pliku do tekstu przyjaznego dla e-maila "
-+"- wersja 4.13.3\n"
-+"Składnia: uuencode [ -<flaga> | --<nazwa> ]... [ plik_wejściowy ] "
-+"nazwa_wyjścia"
+ #: src/uudecode-opts.c:728 src/uudecode-opts.c:763
+@@ -1912,7 +1910,6 @@
+ "<nazwa_wyjścia>\n"
  
- #: src/uuencode-opts.c:703
- msgid ""
-@@ -1005,6 +1279,24 @@
- "typed from a tty.  The consequence is that at a tty, you may need to hit\n"
- "Ctl-D several times to terminate input"
- msgstr ""
-+"'uuencode' służy do tworzenia reprezentacji ASCII pliku, dzięki czemu może\n"
-+"być przesłany kanałami, które w innym przypadku uszkodziłyby dane.\n"
-+"W szczególności poczta elektroniczna nie obsługuje danych binarnych\n"
-+"i przeważnie dodaje znak w przypadku napotkania sekwencji 6-bajtowej\n"
-+"\"\\nFrom \".\n"
-+"\n"
-+"'uuencode' odczytuje plik_wejściowy (jeśli został podany; w przeciwnym\n"
-+"wypadku czyta ze standardowego wejścia) i wypisuje postać zakodowaną na\n"
-+"standardowym wyjściu. Wyjście zaczyna się od linii nagłówka, przeznaczonej\n"
-+"dla programu 'uudecode', podającej sugerowaną nazwę_wyjścia i uprawnienia.\n"
-+"Jeśli nazwa_wyjścia zostanie podana jako '/dev/stdout', 'uudecode' wypisze\n"
-+"zdekodowany plik na standardowe wyjście.\n"
-+"\n"
-+"Uwaga: 'uuencode' używa buforowania wejścia i zakłada, że wejście nie jest\n"
-+"tworzone ręcznie z terminala. Konsekwencją jest to, że w przypadku "
-+"terminala\n"
-+"może by konieczność wciśnięcia Ctrl-D kilka razy w celu zakończenia\n"
-+"wprowadzania."
+ #: src/uuencode-opts.c:695
+-#, fuzzy
+ msgid "   -m, --base64               convert using base64\n"
+ msgstr "   -m, --base64               konwersja przy użyciu base64\n"
  
- #: src/uuencode.c:121 src/uuencode.c:192 src/uuencode.c:284 src/uuencode.c:291
- #, c-format
