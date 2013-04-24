@@ -18,6 +18,7 @@ Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-ma
 # Source1-md5:	336f405f69324d129a6ccd3b66f8eb6c
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-pl.po-update.patch
+Patch2:		%{name}-format.patch
 URL:		http://www.gnu.org/software/sharutils/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.13
@@ -93,6 +94,7 @@ programlar üzerinden güvenli bir şekilde gönderilebilir.
 %setup -q -a1
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %{__rm} po/stamp-po
 

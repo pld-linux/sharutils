@@ -1,0 +1,74 @@
+--- sharutils-4.13.5/src/shar.c.orig	2013-04-12 02:35:05.000000000 +0200
++++ sharutils-4.13.5/src/shar.c	2013-04-24 18:19:54.990797675 +0200
+@@ -461,7 +461,7 @@
+ 
+   if (stat (local_name, &struct_stat))
+     {
+-      error (0, errno, local_name);
++      error (0, errno, "%s", local_name);
+       return SHAR_EXIT_FILE_NOT_FOUND;
+     }
+ 
+@@ -470,7 +470,7 @@
+ 
+   if (directory = opendir (local_name), !directory)
+     {
+-      error (0, errno, local_name);
++      error (0, errno, "%s", local_name);
+       return SHAR_EXIT_CANNOT_OPENDIR;
+     }
+ 
+@@ -563,7 +563,7 @@
+ #else
+   if (closedir (directory))
+     {
+-      error (0, errno, local_name);
++      error (0, errno, "%s", local_name);
+       return SHAR_EXIT_CANNOT_OPENDIR;
+     }
+ #endif
+@@ -615,7 +615,7 @@
+ 
+     if (status != 0)
+       {
+-        error (0, errno, local_name_copy);
++        error (0, errno, "%s", local_name_copy);
+         status = SHAR_EXIT_FILE_NOT_FOUND;
+       }
+     else
+@@ -954,7 +954,7 @@
+         free (c_dir);
+       }
+     else
+-      error (0, errno, _("Cannot get current directory name"));
++      error (0, errno, "%s", _("Cannot get current directory name"));
+   }
+ }
+ 
+@@ -2134,7 +2134,7 @@
+        */
+       FILE * fp = freopen ("/dev/null", fwriteonly_mode, stderr);
+       if (fp != stderr)
+-        error (SHAR_EXIT_FAILED, errno,
++        error (SHAR_EXIT_FAILED, errno, "%s", 
+                _("reopening stderr to /dev/null"));
+     }
+ 
+@@ -2200,7 +2200,7 @@
+   if (HAVE_OPT(QUERY_USER))
+     {
+       if (HAVE_OPT(NET_HEADERS))
+-	error (0, 0, _("PLEASE avoid -X shars on Usenet or public networks"));
++	error (0, 0, "%s", _("PLEASE avoid -X shars on Usenet or public networks"));
+ 
+       fputs ("shar_wish=\n", output);
+     }
+@@ -2348,7 +2348,7 @@
+               optionLoadLine (&sharOptions, arg);
+             }
+           else
+-            error (0, errno, arg);
++            error (0, errno, "%s", arg);
+           continue;
+         }
+ 
