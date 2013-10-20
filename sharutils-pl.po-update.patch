@@ -1,60 +1,48 @@
---- sharutils-4.13.4/po/pl.po.orig	2013-04-01 07:42:02.301972601 +0200
-+++ sharutils-4.13.4/po/pl.po	2013-04-01 07:47:08.598632881 +0200
-@@ -395,7 +395,6 @@
- "\n"
- 
- #: src/shar-opts.c:2291
--#, fuzzy
+--- sharutils-4.14/po/pl.po.orig	2013-10-20 08:02:24.147866080 +0200
++++ sharutils-4.14/po/pl.po	2013-10-20 08:05:32.454524844 +0200
+@@ -6,10 +6,10 @@
+ #
  msgid ""
- "Though this program supports 'uuencode'-d files, they are deprecated.  If\n"
- "you are emailing files, please consider mime-encoded files.  If you do\n"
-@@ -957,13 +956,13 @@
- msgstr "%s: opcja '%s' musi mieć argument.\n"
+ msgstr ""
+-"Project-Id-Version: sharutils 4.13.5\n"
++"Project-Id-Version: sharutils 4.14\n"
+ "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
+ "POT-Creation-Date: 2013-10-18 14:04-0700\n"
+-"PO-Revision-Date: 2013-04-15 20:09+0200\n"
++"PO-Revision-Date: 2013-10-20 08:02+0200\n"
+ "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
+ "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
+ "Language: pl\n"
+@@ -20,7 +20,7 @@
+ #: src/scribble.c:150
+ #, c-format
+ msgid "could not allocate %u bytes of scribble space"
+-msgstr ""
++msgstr "nie udało się przydzielić miejsca na gryzmoły (%u b)"
  
- #: ../autoopts.c:171
+ #. TRANSLATORS:  This is a phony function generated for the purpose of
+ #. constructing the strings to be extracted for translation.  Each string
+@@ -1359,10 +1359,8 @@
+ "[<plik>...]\n"
+ 
+ #: src/unshar-opts.c:971
+-#, fuzzy
+ msgid "   -d, --directory=DIR        unpack into the directory DIR\n"
+-msgstr ""
+-"   -d, --directory=KATALOG    przejście do KATALOGU przed rozpakowywaniem\n"
++msgstr "   -d, --directory=KATALOG    rozpakowanie do podanego KATALOGU\n"
+ 
+ #: src/unshar-opts.c:972
+ msgid "   -c, --overwrite            overwrite any pre-existing files\n"
+@@ -1466,9 +1464,9 @@
+ "Wywołanie 'unshar --help' poda więcej informacji.\n"
+ 
+ #: src/unshar-opts.h:258 src/uudecode-opts.h:236
 -#, fuzzy, c-format
 +#, c-format
- msgid ""
- "(AutoOpts bug):  Equivalenced option '%s' was equivalenced to both\n"
- "\t'%s' and '%s'."
- msgstr ""
- "(Błąd AutoOpts): Opcja równoważna '%s' odpowiada jednocześnie\n"
--"\t'%s' i '%s'"
-+"\t'%s' i '%s'."
+ msgid "could not allocate %zu bytes for %s\n"
+-msgstr "nie udało się odnaleźć opcji 'help'"
++msgstr "nie udało się przydzielić %zu b dla %s\n"
  
- #: ../check.c:94
+ #: src/unshar.c:202
  #, c-format
-@@ -1026,9 +1025,9 @@
- msgstr "Błąd %s: '%s' nie jest rozpoznawanym formatem okresu czasu.\n"
- 
- #: ../check.c:92
--#, fuzzy, c-format
-+#, c-format
- msgid "%s error:  The %s option must appear %d times.\n"
--msgstr "Błąd %s: opcja %s musi wystąpić %d razy\n"
-+msgstr "Błąd %s: opcja %s musi wystąpić %d razy.\n"
- 
- #: ../numeric.c:157
- #, c-format
-@@ -1577,12 +1576,11 @@
- msgstr "Jeśli nie podano plików, dekodowane jest standardowe wejście.\n"
- 
- #: src/uudecode-opts.c:727
--#, fuzzy
- msgid ""
- "'uudecode' transforms uuencoded files into their original form.\n"
- "\n"
- msgstr ""
--"'Uudecode' przekształca pliki zakodowane uuencode do postaci oryginalnej.\n"
-+"'uudecode' przekształca pliki zakodowane uuencode do postaci oryginalnej.\n"
- "\n"
- 
- #: src/uudecode-opts.c:728 src/uudecode-opts.c:763
-@@ -1912,7 +1910,6 @@
- "<nazwa_wyjścia>\n"
- 
- #: src/uuencode-opts.c:695
--#, fuzzy
- msgid "   -m, --base64               convert using base64\n"
- msgstr "   -m, --base64               konwersja przy użyciu base64\n"
- 
