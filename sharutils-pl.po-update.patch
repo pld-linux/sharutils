@@ -1,48 +1,100 @@
---- sharutils-4.14/po/pl.po.orig	2013-10-20 08:02:24.147866080 +0200
-+++ sharutils-4.14/po/pl.po	2013-10-20 08:05:32.454524844 +0200
-@@ -6,10 +6,10 @@
+--- sharutils-4.14.2/po/pl.po.orig	2014-12-15 20:01:47.116714934 +0100
++++ sharutils-4.14.2/po/pl.po	2014-12-15 20:03:14.463377934 +0100
+@@ -1,15 +1,15 @@
+ # Polish translation for sharutils.
+-# Copyright (C) 2005, 2006, 2010, 2011, 2012, 2013 Free Software Foundation, Inc.
++# Copyright (C) 2005, 2006, 2010, 2011, 2012, 2013, 2014 Free Software Foundation, Inc.
+ # This file is distributed under the same license as the sharutils package.
+-# Jakub Bogusz <qboosh@pld-linux.org>, 2005-2013.
++# Jakub Bogusz <qboosh@pld-linux.org>, 2005-2014.
+ # partially based on initial translation by Wojtek Ślusarczyk of PLD, 1999.
  #
  msgid ""
  msgstr ""
--"Project-Id-Version: sharutils 4.13.5\n"
-+"Project-Id-Version: sharutils 4.14\n"
+-"Project-Id-Version: sharutils 4.14\n"
++"Project-Id-Version: sharutils 4.14.2\n"
  "Report-Msgid-Bugs-To: bug-gnu-utils@gnu.org\n"
- "POT-Creation-Date: 2013-10-18 14:04-0700\n"
--"PO-Revision-Date: 2013-04-15 20:09+0200\n"
-+"PO-Revision-Date: 2013-10-20 08:02+0200\n"
+ "POT-Creation-Date: 2014-12-07 18:00-0800\n"
+-"PO-Revision-Date: 2013-10-20 08:02+0200\n"
++"PO-Revision-Date: 2014-12-15 17:30+0100\n"
  "Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
  "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
  "Language: pl\n"
-@@ -20,7 +20,7 @@
- #: src/scribble.c:150
- #, c-format
- msgid "could not allocate %u bytes of scribble space"
--msgstr ""
-+msgstr "nie udało się przydzielić miejsca na gryzmoły (%u b)"
- 
- #. TRANSLATORS:  This is a phony function generated for the purpose of
- #. constructing the strings to be extracted for translation.  Each string
-@@ -1359,10 +1359,8 @@
- "[<plik>...]\n"
- 
- #: src/unshar-opts.c:971
+@@ -294,7 +294,6 @@
+ #.
+ #. referenced via sharOptions.pzCopyright
+ #: src/shar-opts.c:2257
 -#, fuzzy
- msgid "   -d, --directory=DIR        unpack into the directory DIR\n"
--msgstr ""
--"   -d, --directory=KATALOG    przejście do KATALOGU przed rozpakowywaniem\n"
-+msgstr "   -d, --directory=KATALOG    rozpakowanie do podanego KATALOGU\n"
+ msgid ""
+ "shar (GNU sharutils) 4.14.2\n"
+ "Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights "
+@@ -304,7 +303,7 @@
+ "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
+ msgstr ""
+ "shar (GNU sharutils) 4.14.2\n"
+-"Copyright (C) 1994-2013 Free Software Foundation, Inc., wszelkie prawa\n"
++"Copyright (C) 1994-2014 Free Software Foundation, Inc., wszelkie prawa\n"
+ "zastrzeżone. To oprogramowanie jest wolnodostępne, licencjonowane do "
+ "użytku,\n"
+ "modyfikacji i redystrybucji na warunkach Powszechnej Licencji Publicznej "
+@@ -829,13 +828,13 @@
+ msgstr "\tJest mniejsza od minimalnej wersji biblioteki: "
  
- #: src/unshar-opts.c:972
- msgid "   -c, --overwrite            overwrite any pre-existing files\n"
-@@ -1466,9 +1464,9 @@
- "Wywołanie 'unshar --help' poda więcej informacji.\n"
- 
- #: src/unshar-opts.h:258 src/uudecode-opts.h:236
+ #: ../version.c:121
 -#, fuzzy, c-format
 +#, c-format
- msgid "could not allocate %zu bytes for %s\n"
--msgstr "nie udało się odnaleźć opcji 'help'"
-+msgstr "nie udało się przydzielić %zu b dla %s\n"
+ msgid ""
+ "Automated Options version %s\n"
+ "\tCopyright (C) 1999-2014 by Bruce Korb - all rights reserved\n"
+ msgstr ""
+ "Automated Options wersja %s\n"
+-"\tCopyright (C) 1999-2013 Bruce Korb - wszelkie prawa zastrzeżone\n"
++"\tCopyright (C) 1999-2014 Bruce Korb - wszelkie prawa zastrzeżone\n"
  
- #: src/unshar.c:202
+ #: ../makeshell.c:82
  #, c-format
+@@ -1265,7 +1264,6 @@
+ #.
+ #. referenced via unsharOptions.pzCopyright
+ #: src/unshar-opts.c:931
+-#, fuzzy
+ msgid ""
+ "unshar (GNU sharutils) 4.14.2\n"
+ "Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights "
+@@ -1275,7 +1273,7 @@
+ "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
+ msgstr ""
+ "unshar (GNU sharutils) 4.14.2\n"
+-"Copyright (C) 1994-2013 Free Software Foundation, Inc., wszelkie prawa\n"
++"Copyright (C) 1994-2014 Free Software Foundation, Inc., wszelkie prawa\n"
+ "zastrzeżone. To oprogramowanie jest wolnodostępne, licencjonowane do "
+ "użytku,\n"
+ "modyfikacji i redystrybucji na warunkach Powszechnej Licencji Publicznej "
+@@ -1529,7 +1527,6 @@
+ #.
+ #. referenced via uudecodeOptions.pzCopyright
+ #: src/uudecode-opts.c:705
+-#, fuzzy
+ msgid ""
+ "uudecode (GNU sharutils) 4.14.2\n"
+ "Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights "
+@@ -1764,9 +1761,9 @@
+ msgstr "błędna nazwa zakodowana base64: %s"
+ 
+ #: src/uudecode.c:382
+-#, fuzzy, c-format
++#, c-format
+ msgid "%s: Invalid or missing 'begin' line\n"
+-msgstr "%s: błędna lub brak linii 'begin'"
++msgstr "%s: Błędna lub brak linii 'begin'\n"
+ 
+ #: src/uudecode.c:479
+ #, c-format
+@@ -1807,7 +1804,6 @@
+ #.
+ #. referenced via uuencodeOptions.pzCopyright
+ #: src/uuencode-opts.c:656
+-#, fuzzy
+ msgid ""
+ "uuencode (GNU sharutils) 4.14.2\n"
+ "Copyright (C) 1994-2014 Free Software Foundation, Inc., all rights "
