@@ -22,7 +22,7 @@ Patch2:		%{name}-format.patch
 URL:		http://www.gnu.org/software/sharutils/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.14
-BuildRequires:	gettext-devel >= 0.19.3
+BuildRequires:	gettext-tools >= 0.19.3
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	texinfo
 BuildRequires:	xz
