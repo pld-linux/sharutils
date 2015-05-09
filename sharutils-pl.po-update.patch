@@ -1,17 +1,17 @@
---- sharutils-4.15/po/pl.po.orig	2015-02-07 19:53:22.000000000 +0100
-+++ sharutils-4.15/po/pl.po	2015-02-15 13:02:40.772949038 +0100
+--- sharutils-4.15.1/po/pl.po.orig	2015-05-02 17:42:36.000000000 +0200
++++ sharutils-4.15.1/po/pl.po	2015-05-09 21:01:25.812777599 +0200
 @@ -294,7 +294,6 @@
  #.
  #. referenced via sharOptions.pzCopyright
  #: src/shar-opts.c:2257
 -#, fuzzy
  msgid ""
- "shar (GNU sharutils) 4.15\n"
+ "shar (GNU sharutils) 4.15.1\n"
  "Copyright (C) 1994-2015 Free Software Foundation, Inc., all rights "
 @@ -304,7 +303,7 @@
  "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
  msgstr ""
- "shar (GNU sharutils) 4.15\n"
+ "shar (GNU sharutils) 4.15.1\n"
 -"Copyright (C) 1994-2014 Free Software Foundation, Inc., wszelkie prawa\n"
 +"Copyright (C) 1994-2015 Free Software Foundation, Inc., wszelkie prawa\n"
  "zastrzeżone. To oprogramowanie jest wolnodostępne, licencjonowane do "
@@ -23,12 +23,12 @@
  #: src/unshar-opts.c:931
 -#, fuzzy
  msgid ""
- "unshar (GNU sharutils) 4.15\n"
+ "unshar (GNU sharutils) 4.15.1\n"
  "Copyright (C) 1994-2015 Free Software Foundation, Inc., all rights "
 @@ -1275,7 +1273,7 @@
  "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
  msgstr ""
- "unshar (GNU sharutils) 4.15\n"
+ "unshar (GNU sharutils) 4.15.1\n"
 -"Copyright (C) 1994-2014 Free Software Foundation, Inc., wszelkie prawa\n"
 +"Copyright (C) 1994-2015 Free Software Foundation, Inc., wszelkie prawa\n"
  "zastrzeżone. To oprogramowanie jest wolnodostępne, licencjonowane do "
@@ -40,12 +40,12 @@
  #: src/uudecode-opts.c:705
 -#, fuzzy
  msgid ""
- "uudecode (GNU sharutils) 4.15\n"
+ "uudecode (GNU sharutils) 4.15.1\n"
  "Copyright (C) 1994-2015 Free Software Foundation, Inc., all rights "
 @@ -1539,7 +1536,7 @@
  "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
  msgstr ""
- "uudecode (GNU sharutils) 4.15\n"
+ "uudecode (GNU sharutils) 4.15.1\n"
 -"Copyright (C) 1994-2014 Free Software Foundation, Inc., wszelkie prawa\n"
 +"Copyright (C) 1994-2015 Free Software Foundation, Inc., wszelkie prawa\n"
  "zastrzeżone. To oprogramowanie jest wolnodostępne, licencjonowane do "
@@ -57,12 +57,12 @@
  #: src/uuencode-opts.c:656
 -#, fuzzy
  msgid ""
- "uuencode (GNU sharutils) 4.15\n"
+ "uuencode (GNU sharutils) 4.15.1\n"
  "Copyright (C) 1994-2015 Free Software Foundation, Inc., all rights "
 @@ -1817,7 +1813,7 @@
  "version 3 or later <http://gnu.org/licenses/gpl.html>\n"
  msgstr ""
- "uuencode (GNU sharutils) 4.15\n"
+ "uuencode (GNU sharutils) 4.15.1\n"
 -"Copyright (C) 1994-2014 Free Software Foundation, Inc., wszelkie prawa\n"
 +"Copyright (C) 1994-2015 Free Software Foundation, Inc., wszelkie prawa\n"
  "zastrzeżone. To oprogramowanie jest wolnodostępne, licencjonowane do "
