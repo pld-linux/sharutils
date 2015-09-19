@@ -8,12 +8,12 @@ Summary(ru.UTF-8):	Утилиты GNU shar для создания и распа
 Summary(tr.UTF-8):	Arşivleme ve kabuk araçları
 Summary(uk.UTF-8):	Утиліти GNU shar для створення та розпаковки shell-архівів
 Name:		sharutils
-Version:	4.15.1
+Version:	4.15.2
 Release:	1
 License:	GPL v3+
 Group:		Applications/File
 Source0:	http://ftp.gnu.org/gnu/sharutils/%{name}-%{version}.tar.xz
-# Source0-md5:	17fbbd1088059d4c3c9c6955222aae2a
+# Source0-md5:	5975ce21da36491d7aa6dc2b0d9788e0
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source1-md5:	336f405f69324d129a6ccd3b66f8eb6c
 Patch0:		%{name}-info.patch
