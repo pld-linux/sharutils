@@ -20,8 +20,6 @@ Patch0:		%{name}-info.patch
 Patch1:		%{name}-pl.po-update.patch
 Patch2:		%{name}-format.patch
 URL:		http://www.gnu.org/software/sharutils/
-BuildRequires:	autoconf >= 2.50
-BuildRequires:	automake >= 1:1.14
 BuildRequires:	gettext-tools >= 0.19.3
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	texinfo
@@ -99,11 +97,6 @@ programlar üzerinden güvenli bir şekilde gönderilebilir.
 %{__rm} po/stamp-po
 
 %build
-%{__gettextize}
-%{__aclocal} -I m4
-%{__autoconf}
-%{__autoheader}
-%{__automake}
 %configure
 
 %{__make}
