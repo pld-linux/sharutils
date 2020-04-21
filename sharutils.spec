@@ -19,6 +19,7 @@ Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-ma
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-pl.po-update.patch
 Patch2:		%{name}-format.patch
+Patch3:		glibc-2.28.patch
 URL:		http://www.gnu.org/software/sharutils/
 BuildRequires:	gettext-tools >= 0.19.3
 BuildRequires:	tar >= 1:1.22
@@ -93,6 +94,7 @@ programlar üzerinden güvenli bir şekilde gönderilebilir.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %{__rm} po/stamp-po
 
