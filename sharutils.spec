@@ -20,6 +20,7 @@ Patch0:		%{name}-info.patch
 Patch1:		%{name}-pl.po-update.patch
 Patch2:		%{name}-format.patch
 Patch3:		glibc-2.28.patch
+Patch4:		%{name}-4.15.2-Fix-building-with-GCC-10.patch
 URL:		http://www.gnu.org/software/sharutils/
 BuildRequires:	gettext-tools >= 0.19.3
 BuildRequires:	tar >= 1:1.22
@@ -95,6 +96,7 @@ programlar üzerinden güvenli bir şekilde gönderilebilir.
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
+%patch4 -p1
 
 %{__rm} po/stamp-po
 
