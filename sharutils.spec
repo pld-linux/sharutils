@@ -12,7 +12,7 @@ Version:	4.15.2
 Release:	1
 License:	GPL v3+
 Group:		Applications/File
-Source0:	http://ftp.gnu.org/gnu/sharutils/%{name}-%{version}.tar.xz
+Source0:	https://ftp.gnu.org/gnu/sharutils/%{name}-%{version}.tar.xz
 # Source0-md5:	5975ce21da36491d7aa6dc2b0d9788e0
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source1-md5:	336f405f69324d129a6ccd3b66f8eb6c
