@@ -1,6 +1,7 @@
---- sharutils-4.14/src/shar.c.orig	2013-10-13 00:18:28.000000000 +0200
-+++ sharutils-4.14/src/shar.c	2013-10-20 08:11:36.027842920 +0200
-@@ -926,7 +926,7 @@
+diff -urNp -x '*.orig' sharutils-4.15.2.org/src/shar.c sharutils-4.15.2/src/shar.c
+--- sharutils-4.15.2.org/src/shar.c	2015-05-22 17:27:34.000000000 +0200
++++ sharutils-4.15.2/src/shar.c	2024-12-04 00:00:06.485290021 +0100
+@@ -931,7 +931,7 @@ print_header_stamp (FILE * fp)
          free (c_dir);
        }
      else
@@ -9,16 +10,16 @@
    }
  }
  
-@@ -2148,7 +2148,7 @@
+@@ -2154,7 +2154,7 @@ configure_shar (int * argc_p, char *** a
         */
-       FILE * fp = freopen ("/dev/null", fwriteonly_mode, stderr);
+       FILE * fp = freopen ("/dev/null", "w" FOPEN_BINARY, stderr);
        if (fp != stderr)
 -        error (SHAR_EXIT_FAILED, errno,
 +        error (SHAR_EXIT_FAILED, errno, "%s", 
                 _("reopening stderr to /dev/null"));
      }
  
-@@ -2219,7 +2219,7 @@
+@@ -2225,7 +2225,7 @@ configure_shar (int * argc_p, char *** a
    if (HAVE_OPT(QUERY_USER))
      {
        if (HAVE_OPT(NET_HEADERS))
